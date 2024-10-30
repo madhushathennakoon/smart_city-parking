@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853512CD2266000841149 /* smart_city_parkingApp.swift */; };
+		AED853542CD2266000841149 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* ContentView.swift */; };
+		AED853562CD2266100841149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853552CD2266100841149 /* Assets.xcassets */; };
+		AED853592CD2266100841149 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853582CD2266100841149 /* Preview Assets.xcassets */; };
+		AED853632CD2266200841149 /* smart_city_parkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853622CD2266200841149 /* smart_city_parkingTests.swift */; };
+		AED8536D2CD2266200841149 /* smart_city_parkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8536C2CD2266200841149 /* smart_city_parkingUITests.swift */; };
+		AED8536F2CD2266200841149 /* smart_city_parkingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED8536E2CD2266200841149 /* smart_city_parkingUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AED8535F2CD2266200841149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED853462CD2266000841149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED8534D2CD2266000841149;
+			remoteInfo = smart_city_parking;
+		};
+		AED853692CD2266200841149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED853462CD2266000841149 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED8534D2CD2266000841149;
+			remoteInfo = smart_city_parking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
+		AED853532CD2266000841149 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AED853552CD2266100841149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AED853582CD2266100841149 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AED8535E2CD2266200841149 /* smart_city_parkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smart_city_parkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED853622CD2266200841149 /* smart_city_parkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingTests.swift; sourceTree = "<group>"; };
+		AED853682CD2266200841149 /* smart_city_parkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smart_city_parkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED8536C2CD2266200841149 /* smart_city_parkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingUITests.swift; sourceTree = "<group>"; };
+		AED8536E2CD2266200841149 /* smart_city_parkingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AED8534B2CD2266000841149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED8535B2CD2266200841149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED853652CD2266200841149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AED853452CD2266000841149 = {
+			isa = PBXGroup;
+			children = (
+				AED853502CD2266000841149 /* smart_city_parking */,
+				AED853612CD2266200841149 /* smart_city_parkingTests */,
+				AED8536B2CD2266200841149 /* smart_city_parkingUITests */,
+				AED8534F2CD2266000841149 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AED8534F2CD2266000841149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AED8534E2CD2266000841149 /* smart_city_parking.app */,
+				AED8535E2CD2266200841149 /* smart_city_parkingTests.xctest */,
+				AED853682CD2266200841149 /* smart_city_parkingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AED853502CD2266000841149 /* smart_city_parking */ = {
+			isa = PBXGroup;
+			children = (
+				AED853512CD2266000841149 /* smart_city_parkingApp.swift */,
+				AED853532CD2266000841149 /* ContentView.swift */,
+				AED853552CD2266100841149 /* Assets.xcassets */,
+				AED853572CD2266100841149 /* Preview Content */,
+			);
+			path = smart_city_parking;
+			sourceTree = "<group>";
+		};
+		AED853572CD2266100841149 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				AED853582CD2266100841149 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AED853612CD2266200841149 /* smart_city_parkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				AED853622CD2266200841149 /* smart_city_parkingTests.swift */,
+			);
+			path = smart_city_parkingTests;
+			sourceTree = "<group>";
+		};
+		AED8536B2CD2266200841149 /* smart_city_parkingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AED8536C2CD2266200841149 /* smart_city_parkingUITests.swift */,
+				AED8536E2CD2266200841149 /* smart_city_parkingUITestsLaunchTests.swift */,
+			);
+			path = smart_city_parkingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AED8534D2CD2266000841149 /* smart_city_parking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED853722CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parking" */;
+			buildPhases = (
+				AED8534A2CD2266000841149 /* Sources */,
+				AED8534B2CD2266000841149 /* Frameworks */,
+				AED8534C2CD2266000841149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = smart_city_parking;
+			productName = smart_city_parking;
+			productReference = AED8534E2CD2266000841149 /* smart_city_parking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AED8535D2CD2266200841149 /* smart_city_parkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED853752CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parkingTests" */;
+			buildPhases = (
+				AED8535A2CD2266200841149 /* Sources */,
+				AED8535B2CD2266200841149 /* Frameworks */,
+				AED8535C2CD2266200841149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED853602CD2266200841149 /* PBXTargetDependency */,
+			);
+			name = smart_city_parkingTests;
+			productName = smart_city_parkingTests;
+			productReference = AED8535E2CD2266200841149 /* smart_city_parkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AED853672CD2266200841149 /* smart_city_parkingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED853782CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parkingUITests" */;
+			buildPhases = (
+				AED853642CD2266200841149 /* Sources */,
+				AED853652CD2266200841149 /* Frameworks */,
+				AED853662CD2266200841149 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED8536A2CD2266200841149 /* PBXTargetDependency */,
+			);
+			name = smart_city_parkingUITests;
+			productName = smart_city_parkingUITests;
+			productReference = AED853682CD2266200841149 /* smart_city_parkingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AED853462CD2266000841149 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					AED8534D2CD2266000841149 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					AED8535D2CD2266200841149 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = AED8534D2CD2266000841149;
+					};
+					AED853672CD2266200841149 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = AED8534D2CD2266000841149;
+					};
+				};
+			};
+			buildConfigurationList = AED853492CD2266000841149 /* Build configuration list for PBXProject "smart_city_parking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AED853452CD2266000841149;
+			productRefGroup = AED8534F2CD2266000841149 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AED8534D2CD2266000841149 /* smart_city_parking */,
+				AED8535D2CD2266200841149 /* smart_city_parkingTests */,
+				AED853672CD2266200841149 /* smart_city_parkingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AED8534C2CD2266000841149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED853592CD2266100841149 /* Preview Assets.xcassets in Resources */,
+				AED853562CD2266100841149 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED8535C2CD2266200841149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED853662CD2266200841149 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AED8534A2CD2266000841149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED853542CD2266000841149 /* ContentView.swift in Sources */,
+				AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED8535A2CD2266200841149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED853632CD2266200841149 /* smart_city_parkingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED853642CD2266200841149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED8536F2CD2266200841149 /* smart_city_parkingUITestsLaunchTests.swift in Sources */,
+				AED8536D2CD2266200841149 /* smart_city_parkingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AED853602CD2266200841149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED8534D2CD2266000841149 /* smart_city_parking */;
+			targetProxy = AED8535F2CD2266200841149 /* PBXContainerItemProxy */;
+		};
+		AED8536A2CD2266200841149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED8534D2CD2266000841149 /* smart_city_parking */;
+			targetProxy = AED853692CD2266200841149 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AED853702CD2266200841149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AED853712CD2266200841149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AED853732CD2266200841149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AED853742CD2266200841149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parking";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AED853762CD2266200841149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parkingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smart_city_parking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/smart_city_parking";
+			};
+			name = Debug;
+		};
+		AED853772CD2266200841149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parkingTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/smart_city_parking.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/smart_city_parking";
+			};
+			name = Release;
+		};
+		AED853792CD2266200841149 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parkingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smart_city_parking;
+			};
+			name = Debug;
+		};
+		AED8537A2CD2266200841149 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "madhusha.smart-city-parkingUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = smart_city_parking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED853492CD2266000841149 /* Build configuration list for PBXProject "smart_city_parking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED853702CD2266200841149 /* Debug */,
+				AED853712CD2266200841149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED853722CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED853732CD2266200841149 /* Debug */,
+				AED853742CD2266200841149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED853752CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED853762CD2266200841149 /* Debug */,
+				AED853772CD2266200841149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED853782CD2266200841149 /* Build configuration list for PBXNativeTarget "smart_city_parkingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED853792CD2266200841149 /* Debug */,
+				AED8537A2CD2266200841149 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AED853462CD2266000841149 /* Project object */;
+}
