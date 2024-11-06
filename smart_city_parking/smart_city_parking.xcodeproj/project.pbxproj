@@ -11,6 +11,9 @@
 		AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */; };
 		AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8252CDB404300E039C5 /* Onboarding 3.swift */; };
 		AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8272CDB42F100E039C5 /* SignUp.swift */; };
+		AE95C82A2CDB647100E039C5 /* Verification 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8292CDB647100E039C5 /* Verification 1.swift */; };
+		AE95C82C2CDB826900E039C5 /* Verification 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82B2CDB826900E039C5 /* Verification 2.swift */; };
+		AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82D2CDB85BF00E039C5 /* SignIn.swift */; };
 		AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853512CD2266000841149 /* smart_city_parkingApp.swift */; };
 		AED853542CD2266000841149 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* SplashScreenView.swift */; };
 		AED853562CD2266100841149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853552CD2266100841149 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 		AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 2.swift"; sourceTree = "<group>"; };
 		AE95C8252CDB404300E039C5 /* Onboarding 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 3.swift"; sourceTree = "<group>"; };
 		AE95C8272CDB42F100E039C5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		AE95C8292CDB647100E039C5 /* Verification 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Verification 1.swift"; sourceTree = "<group>"; };
+		AE95C82B2CDB826900E039C5 /* Verification 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Verification 2.swift"; sourceTree = "<group>"; };
+		AE95C82D2CDB85BF00E039C5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
 		AED853532CD2266000841149 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -108,6 +114,9 @@
 				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
 				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
 				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
+				AE95C8292CDB647100E039C5 /* Verification 1.swift */,
+				AE95C82B2CDB826900E039C5 /* Verification 2.swift */,
+				AE95C82D2CDB85BF00E039C5 /* SignIn.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
 				AED853572CD2266100841149 /* Preview Content */,
 			);
@@ -270,9 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED853542CD2266000841149 /* SplashScreenView.swift in Sources */,
+				AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */,
 				AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */,
 				AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */,
 				AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */,
+				AE95C82C2CDB826900E039C5 /* Verification 2.swift in Sources */,
+				AE95C82A2CDB647100E039C5 /* Verification 1.swift in Sources */,
 				AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */,
 				AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */,
 			);

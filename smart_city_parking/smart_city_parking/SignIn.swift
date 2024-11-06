@@ -1,5 +1,5 @@
 //
-//  SignUp.swift
+//  SignIn.swift
 //  smart_city_parking
 //
 //  Created by COBSCCOMPY4231P-019 on 2024-11-06.
@@ -7,58 +7,57 @@
 
 import SwiftUI
 
-struct SignUp: View {
+struct SignIn: View {
     var body: some View {
         VStack(spacing: 20) {
             VStack(spacing:8){
-                Text("Create Account")
+                Text("Login Account")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity,alignment: .leading)
                     .padding(.horizontal,20)
 
-                Text("Please fill in the details below to create your ParkSpot account.")
+                Text("Please filled below details and create you parkspot account.")
                     .font(.subheadline)
                     .foregroundColor(.gray)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal,20)
             }
-            .padding(.bottom,15)
+            .padding(.bottom,30)
                     
                         
 
-                    
-                    VStack(alignment: .leading, spacing: 10) {
-                        Group {
-                            Text("Username")
-                                .font(.headline)
-                            TextField("Enter your username", text: .constant(""))
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
-                            
-                            Text("Email Or Phone Number")
-                                .font(.headline)
-                            TextField("Enter your email or phone", text: .constant(""))
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
+            VStack(alignment: .leading, spacing: 10) {
+                Group {
+                    Text("Email Or Phone Number")
+                        .font(.headline)
+                    TextField("Enter your email or phone", text: .constant(""))
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
 
-                            Text("Password")
-                                .font(.headline)
-                            SecureField("Enter your password", text: .constant(""))
-                                .padding()
-                                .background(Color(.systemGray6))
-                                .cornerRadius(8)
+                    Text("Password")
+                        .font(.headline)
+                    SecureField("Enter your password", text: .constant(""))
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                    Text("Forgot password")
+                        .font(.footnote)
+                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                        .padding(.leading, 250)
+                        .padding(.top, 15)
                         }
                     }
                     .padding(.horizontal,20)
+                    
+                    
 
                     
                     Button(action: {
-                        // Create account action
+                        // Create
                     }) {
-                        Text("Create Account")
+                        Text("Login ")
                             .font(.headline)
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .foregroundColor(.white)
@@ -68,7 +67,7 @@ struct SignUp: View {
                             .cornerRadius(8)
                     }
                     .padding(.horizontal,20)
-                    .padding(.top,13)
+                    .padding(.top,43)
 
                     
                     Text("Or using other Method")
@@ -117,12 +116,12 @@ struct SignUp: View {
                     .padding(.horizontal, 20)
       
                     HStack {
-                        Text("Already have an account?")
+                        Text("Don't have an account?")
                             .foregroundColor(.gray)
                         Button(action: {
                             // Login action
                         }) {
-                            Text("Login")
+                            Text("Register")
                                 .foregroundColor(.pink)
                         }
                     }
@@ -134,5 +133,5 @@ struct SignUp: View {
 }
 
 #Preview {
-    SignUp()
+    SignIn()
 }
