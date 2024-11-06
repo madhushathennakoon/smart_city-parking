@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */; };
+		AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */; };
+		AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8252CDB404300E039C5 /* Onboarding 3.swift */; };
+		AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8272CDB42F100E039C5 /* SignUp.swift */; };
 		AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853512CD2266000841149 /* smart_city_parkingApp.swift */; };
-		AED853542CD2266000841149 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* ContentView.swift */; };
+		AED853542CD2266000841149 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* SplashScreenView.swift */; };
 		AED853562CD2266100841149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853552CD2266100841149 /* Assets.xcassets */; };
 		AED853592CD2266100841149 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853582CD2266100841149 /* Preview Assets.xcassets */; };
 		AED853632CD2266200841149 /* smart_city_parkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853622CD2266200841149 /* smart_city_parkingTests.swift */; };
@@ -34,9 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 1.swift"; sourceTree = "<group>"; };
+		AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 2.swift"; sourceTree = "<group>"; };
+		AE95C8252CDB404300E039C5 /* Onboarding 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 3.swift"; sourceTree = "<group>"; };
+		AE95C8272CDB42F100E039C5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
-		AED853532CD2266000841149 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AED853532CD2266000841149 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		AED853552CD2266100841149 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AED853582CD2266100841149 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AED8535E2CD2266200841149 /* smart_city_parkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = smart_city_parkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +103,11 @@
 			isa = PBXGroup;
 			children = (
 				AED853512CD2266000841149 /* smart_city_parkingApp.swift */,
-				AED853532CD2266000841149 /* ContentView.swift */,
+				AED853532CD2266000841149 /* SplashScreenView.swift */,
+				AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */,
+				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
+				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
+				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
 				AED853572CD2266100841149 /* Preview Content */,
 			);
@@ -257,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AED853542CD2266000841149 /* ContentView.swift in Sources */,
+				AED853542CD2266000841149 /* SplashScreenView.swift in Sources */,
+				AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */,
 				AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */,
+				AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */,
+				AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */,
+				AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
