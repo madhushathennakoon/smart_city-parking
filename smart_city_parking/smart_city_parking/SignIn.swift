@@ -92,7 +92,7 @@ struct SignIn: View {
                             }
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
                         
                         Button(action: {
@@ -110,7 +110,7 @@ struct SignIn: View {
                             }
                             .frame(maxWidth: .infinity)
                             .padding()
-                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray, lineWidth: 1))
+                            .background(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 1))
                         }
                     }
                     .padding(.horizontal, 20)

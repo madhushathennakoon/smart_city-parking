@@ -58,11 +58,11 @@ struct Onboarding_2: View {
                     NavigationLink(destination: SignUp()){
                         Text("Skip")
                             .fontWeight(.bold)
-                            .foregroundColor(.pink)
+                            .foregroundColor(.black)
                             .frame(width: 120, height: 50)
                             .background(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.pink, lineWidth: 2)
+                                    .stroke(Color.black, lineWidth: 2)
                             )
                         
                     }

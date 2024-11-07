@@ -25,13 +25,19 @@ struct Verification_2: View {
                 .padding(.horizontal,20)
                 .padding(.top,20)
                 
+                ZStack{
+                    Circle()
+                        .fill(Color.pink.opacity(0.2))
+                        .frame(width: 150, height: 150)
+                    Image("Success")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 110, height: 110)
+                        .background(Circle().fill(Color.pink.opacity(0.2)))
+                        
+                }
+                .padding(.top,30)
                 
-                Image("Success")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 130, height: 130)
-                    .background(Circle().fill(Color.pink.opacity(0.2)))
-                    .padding(.top,40)
                 
                 
                 Text("Register Success ")
