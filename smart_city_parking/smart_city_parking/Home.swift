@@ -9,13 +9,14 @@ import SwiftUI
 
 struct Home: View {
     var body: some View {
-        VStack {
-            ScrollView {
-                VStack(alignment: .leading) {
-                    HStack(spacing: 10) {
+        NavigationView{
+            VStack {
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        HStack(spacing: 10) {
                             Image("LocationBlack")
-                            .resizable()
-                            .frame(width: 25, height: 25)
+                                .resizable()
+                                .frame(width: 25, height: 25)
                             VStack(alignment: .leading, spacing: 2) {
                                 Text("Location")
                                     .font(.footnote)
@@ -23,128 +24,132 @@ struct Home: View {
                                 Text("Ward Place, Colombo 7")
                                     .font(.headline)
                                     .fontWeight(.bold)
-                                }
-                                Spacer()
                             }
-                            .padding(.horizontal,20)
-                            .padding(.top,15)
-                            
-                           
-                            HStack(spacing: 20) {
-                                Image("Search")
-                                    .resizable()
-                                    .frame(width: 16, height: 16)
-                                Text("Search")
-                                    .foregroundColor(.gray)
-                                Spacer()
-                            }
-                            .padding()
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(10)
-                            .padding(.horizontal,20)
-                            .padding(.top, 20)
-                            
-                            
-                            HStack {
-                                Text("Category")
-                                    .font(.title3)
-                                    .fontWeight(.bold)
-                                Spacer()
-                                Text("See All")
-                                    .foregroundColor(.pink)
-                                    .font(.footnote)
-                            }
-                            .padding(.horizontal,20)
-                            .padding(.top,20)
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 15) {
-                                    CategoryIcon(name: "Car", icon: "Car")
-                                    CategoryIcon(name: "Bike", icon: "Bike")
-                                    CategoryIcon(name: "Truck", icon: "Truck")
-                                    CategoryIcon(name: "Bus", icon: "Bus")
-                                    CategoryIcon(name: "Truck", icon: "Car")
-                                    CategoryIcon(name: "Truck", icon: "Bike")
-                                    CategoryIcon(name: "Truck", icon: "Truck")
-                                }
-                                .padding(.horizontal,20)
-                                .padding(.top,10)
-                            }
-                    
-                            
-                    
-                          HStack{
-                            Text("Popular Parking")
-                              .font(.title3)
-                              .fontWeight(.bold)
+                            Spacer()
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,15)
+                        
+                        
+                        HStack(spacing: 20) {
+                            Image("Search")
+                                .resizable()
+                                .frame(width: 16, height: 16)
+                            Text("Search")
+                                .foregroundColor(.gray)
+                            Spacer()
+                        }
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                        .padding(.horizontal,20)
+                        .padding(.top, 20)
+                        
+                        
+                        HStack {
+                            Text("Category")
+                                .font(.title3)
+                                .fontWeight(.bold)
                             Spacer()
                             Text("See All")
-                              .foregroundColor(.pink)
-                              .font(.footnote)
-                          }
-                          .padding(.horizontal,20)
-                          .padding(.top,20)
-                            
-                           ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 15) {
-                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Parking Name", price: "100", rating: "4.8", slot: "28 Spots")
-                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Abcd", price: "100", rating: "4.8", slot: "28 Spots")
-                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Abcd", price: "100", rating: "4.8", slot: "28 Spots")
-                                    
-                                    
-                                }
-                                .padding(.horizontal,20)
-                                .padding([.top, .bottom],10)
-
+                                .foregroundColor(.pink)
+                                .font(.footnote)
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,20)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 15) {
+                                CategoryIcon(name: "Car", icon: "Car")
+                                CategoryIcon(name: "Bike", icon: "Bike")
+                                CategoryIcon(name: "Truck", icon: "Truck")
+                                CategoryIcon(name: "Bus", icon: "Bus")
+                                CategoryIcon(name: "Truck", icon: "Car")
+                                CategoryIcon(name: "Truck", icon: "Bike")
+                                CategoryIcon(name: "Truck", icon: "Truck")
                             }
-                    
+                            .padding(.horizontal,20)
+                            .padding(.top,10)
+                        }
+                        
+                        
+                        
+                        HStack{
+                            Text("Popular Parking")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Spacer()
+                            Text("See All")
+                                .foregroundColor(.pink)
+                                .font(.footnote)
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,20)
+                        
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 15) {
+                                NavigationLink(destination: ParkingDetails()){
+                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Parking Name", price: "100", rating: "4.8", slot: "28")
+                                }
+                                NavigationLink(destination: ParkingDetails()){
+                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Parking Name", price: "100", rating: "4.8", slot: "28")
+                                }
+                                NavigationLink(destination: ParkingDetails()){
+                                    ParkingCard(imgName: "ParkingImg", parkingCTGY: "Car Parking", parkingName: "Parking Name", price: "100", rating: "4.8", slot: "28")
+                                }
+                                
+                                
+                                
+                                
+                                
+                            }
+                            .padding(.horizontal,20)
+                            .padding([.top, .bottom],10)
                             
-                    HStack{
-                        Text("Nearby Parking")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                      Spacer()
-                      Text("See All")
-                        .foregroundColor(.pink)
-                        .font(.footnote)
-                    }
-                    .padding(.horizontal,20)
-                    .padding(.top,20)
+                        }
+                        
+                        
+                        HStack{
+                            Text("Nearby Parking")
+                                .font(.title3)
+                                .fontWeight(.bold)
+                            Spacer()
+                            Text("See All")
+                                .foregroundColor(.pink)
+                                .font(.footnote)
+                        }
+                        .padding(.horizontal,20)
+                        .padding(.top,20)
+                        
+                        VStack(spacing: 15) {
+                            NavigationLink(destination: ParkingDetails()){
+                                ParkingListRow(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                            }
+                            NavigationLink(destination: ParkingDetails()){
+                                ParkingListRow(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                            }
+                            NavigationLink(destination: ParkingDetails()){
+                                ParkingListRow(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                            }
                             
-                    VStack(spacing: 15) {
-                        ParkingListRow()
-                        ParkingListRow()
+                            
+                        }
+                        .padding(.horizontal,20)
+                        .padding([.top, .bottom],10)
+                        
                     }
-                    .padding(.horizontal,20)
-                    .padding([.top, .bottom],10)
-                    
-                    
-                    
-         }
-     }
+                }
+       
+            }
+        }
+    }
+}
 
-    
-            // Bottom Navigation - stick it to the bottom
-                      Divider()
-                      HStack {
-                          BottomNavItem(icon: "house.fill", title: "Home")
-                          Spacer()
-                          BottomNavItem(icon: "magnifyingglass", title: "Explore")
-                          Spacer()
-                          BottomNavItem(icon: "calendar", title: "Booking")
-                          Spacer()
-                          BottomNavItem(icon: "heart", title: "Favourite")
-                          Spacer()
-                          BottomNavItem(icon: "person", title: "Profile")
-                      }
-                      .padding()
-                      .background(Color.white) // Ensure the navigation bar has a background color
-                  }
-                  .ignoresSafeArea(edges: .bottom) // Allow the VStack to extend to the bottom edge
-              }
-          }
 
-          // Subviews for Home Page Components
+
+
+          
           struct CategoryIcon: View {
               var name: String
               var icon: String
@@ -160,23 +165,6 @@ struct Home: View {
                           .font(.subheadline)
                           .foregroundColor(.black)
                   }
-              }
-          }
-
-          struct SectionView: View {
-              var title: String
-              var body: some View {
-                  HStack {
-                      Text(title)
-                          .font(.headline)
-                          .fontWeight(.bold)
-                      Spacer()
-                      Text("See All")
-                          .foregroundColor(.pink)
-                          .fontWeight(.bold)
-                  }
-                  .padding(.horizontal,20)
-                  .padding(.top,30)
               }
           }
 
@@ -235,7 +223,7 @@ struct Home: View {
                           Image("CarBlue")
                               .resizable()
                               .frame(width: 25, height: 25)
-                          Text(slot)
+                          Text(slot + " Spots")
                               .font(.caption)
                               .foregroundColor(.black)
                       }
@@ -250,16 +238,24 @@ struct Home: View {
           }
 
           struct ParkingListRow: View {
+              var imgName: String
+              var parkingCTGY: String
+              var rating: String
+              var parkingName: String
+              var price: String
+              var slot: String
+              
               var body: some View {
                   HStack(spacing: 15) {
-                      Image("ParkingImg2")
+                      Image(imgName)
                           .resizable()
                           .frame(width: 125, height: 125)
                           .cornerRadius(10)
                       VStack(alignment: .leading, spacing: 10) {
-                          HStack {
-                              Text("Car Parking")
-                                  .font(.caption)
+                          HStack{
+                              Text(parkingCTGY)
+                                  .font(.footnote)
+                                  .bold()
                                   .padding(5)
                                   .background(Color.blue.opacity(0.2))
                                   .cornerRadius(5)
@@ -267,25 +263,40 @@ struct Home: View {
                               Spacer()
                               Image("Star")
                                   .resizable()
-                                  .frame(width: 15, height: 15)
-                              Text("4.8")
-                                  .font(.caption)
+                                  .frame(width: 17, height: 17)
+                              Text(rating)
+                                  .font(.footnote)
+                                  .bold()
                                   .foregroundColor(.black)
                               }
+                          .padding(.bottom,45)
                           
-                          
-                          HStack {
-                              Text("Rs.100/hr")
-                                  .foregroundColor(.pink)
+                          HStack{
+                              Text(parkingName)
+                                  .font(.caption)
+                                  .bold()
                               Spacer()
-                              Image(systemName: "star.fill")
-                                  .foregroundColor(.yellow)
-                              Text("4.8")
+                              
+                              Text("Rs." + price)
+                                  .foregroundColor(.red)
                                   .font(.caption)
-                              Image(systemName: "car.fill")
-                              Text("28 Spots")
-                                  .font(.caption)
+                                  .bold()
+                                  .padding(.trailing,-6)
+                              Text("/hr")
                                   .foregroundColor(.gray)
+                                  .font(.system(size: 11))
+                              }
+                          .padding(.top,-30)
+                          
+                         
+                          HStack{
+                              Image("CarBlue")
+                                  .resizable()
+                                  .frame(width: 25, height: 25)
+                              Text(slot + " Spots")
+                                  .font(.footnote)
+                                  .bold()
+                                  .foregroundColor(.black)
                           }
                       }
                       Spacer()
@@ -297,20 +308,7 @@ struct Home: View {
               }
           }
 
-          struct BottomNavItem: View {
-              var icon: String
-              var title: String
-              
-              var body: some View {
-                  VStack {
-                      Image(systemName: icon)
-                          .font(.title3)
-                      Text(title)
-                          .font(.caption)
-                  }
-                  .foregroundColor(.black)
-              }
-          }
+          
 
 
 

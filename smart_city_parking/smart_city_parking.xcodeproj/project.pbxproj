@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */; };
+		AE61C1102CDDDAA200C59148 /* ParkingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */; };
+		AE61C1122CDDE47F00C59148 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61C1112CDDE47F00C59148 /* MainView.swift */; };
 		AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */; };
 		AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8252CDB404300E039C5 /* Onboarding 3.swift */; };
 		AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8272CDB42F100E039C5 /* SignUp.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 1.swift"; sourceTree = "<group>"; };
+		AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDetails.swift; sourceTree = "<group>"; };
+		AE61C1112CDDE47F00C59148 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 2.swift"; sourceTree = "<group>"; };
 		AE95C8252CDB404300E039C5 /* Onboarding 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 3.swift"; sourceTree = "<group>"; };
 		AE95C8272CDB42F100E039C5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				AE95C82F2CDB8CDA00E039C5 /* Location.swift */,
 				AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */,
 				AEB216D32CDC926A0016C3F3 /* Home.swift */,
+				AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */,
+				AE61C1112CDDE47F00C59148 /* MainView.swift */,
 				AE95C82D2CDB85BF00E039C5 /* SignIn.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
 				AED853572CD2266100841149 /* Preview Content */,
@@ -287,6 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE61C1102CDDDAA200C59148 /* ParkingDetails.swift in Sources */,
+				AE61C1122CDDE47F00C59148 /* MainView.swift in Sources */,
 				AED853542CD2266000841149 /* SplashScreenView.swift in Sources */,
 				AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */,
 				AEB216D22CDC89EE0016C3F3 /* ManualLocation.swift in Sources */,
