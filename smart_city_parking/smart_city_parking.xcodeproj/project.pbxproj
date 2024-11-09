@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272E504B2CDEEAB1001E01F2 /* BookingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */; };
 		AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */; };
 		AE61C1102CDDDAA200C59148 /* ParkingDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */; };
 		AE61C1122CDDE47F00C59148 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE61C1112CDDE47F00C59148 /* MainView.swift */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDetails.swift; sourceTree = "<group>"; };
 		AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 1.swift"; sourceTree = "<group>"; };
 		AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDetails.swift; sourceTree = "<group>"; };
 		AE61C1112CDDE47F00C59148 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				AED853512CD2266000841149 /* smart_city_parkingApp.swift */,
 				AED853532CD2266000841149 /* SplashScreenView.swift */,
 				AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */,
+				272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */,
 				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
 				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
 				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
@@ -307,6 +310,7 @@
 				AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */,
 				AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */,
 				AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */,
+				272E504B2CDEEAB1001E01F2 /* BookingDetails.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
