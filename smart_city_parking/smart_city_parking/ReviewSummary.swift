@@ -199,10 +199,10 @@ struct ParkingInfoCard: View {
                         .foregroundColor(.black)
                 }
             }
-            Spacer()
+            
         }
         .padding()
-        .background(Color.gray.opacity(0.15))
+        .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 5)
     }

@@ -18,6 +18,7 @@
 		AE81E82B2CDF76570070A4A1 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE81E82A2CDF76570070A4A1 /* SuccessView.swift */; };
 		AE81E82D2CDF81270070A4A1 /* MyBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE81E82C2CDF81270070A4A1 /* MyBooking.swift */; };
 		AE81E82F2CDF92AB0070A4A1 /* Favourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE81E82E2CDF92AB0070A4A1 /* Favourite.swift */; };
+		AE81E8312CDF9E650070A4A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE81E8302CDF9E650070A4A1 /* Profile.swift */; };
 		AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */; };
 		AE95C8262CDB404300E039C5 /* Onboarding 3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8252CDB404300E039C5 /* Onboarding 3.swift */; };
 		AE95C8282CDB42F100E039C5 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C8272CDB42F100E039C5 /* SignUp.swift */; };
@@ -65,6 +66,7 @@
 		AE81E82A2CDF76570070A4A1 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		AE81E82C2CDF81270070A4A1 /* MyBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooking.swift; sourceTree = "<group>"; };
 		AE81E82E2CDF92AB0070A4A1 /* Favourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favourite.swift; sourceTree = "<group>"; };
+		AE81E8302CDF9E650070A4A1 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 2.swift"; sourceTree = "<group>"; };
 		AE95C8252CDB404300E039C5 /* Onboarding 3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Onboarding 3.swift"; sourceTree = "<group>"; };
 		AE95C8272CDB42F100E039C5 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				AE81E82A2CDF76570070A4A1 /* SuccessView.swift */,
 				AE81E82C2CDF81270070A4A1 /* MyBooking.swift */,
 				AE81E82E2CDF92AB0070A4A1 /* Favourite.swift */,
+				AE81E8302CDF9E650070A4A1 /* Profile.swift */,
 				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
 				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
 				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
@@ -320,6 +323,7 @@
 				AE81E8272CDF486B0070A4A1 /* ReviewSummary.swift in Sources */,
 				AE81E82D2CDF81270070A4A1 /* MyBooking.swift in Sources */,
 				AE61C1102CDDDAA200C59148 /* ParkingDetails.swift in Sources */,
+				AE81E8312CDF9E650070A4A1 /* Profile.swift in Sources */,
 				AE61C1122CDDE47F00C59148 /* MainView.swift in Sources */,
 				AED853542CD2266000841149 /* SplashScreenView.swift in Sources */,
 				AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */,

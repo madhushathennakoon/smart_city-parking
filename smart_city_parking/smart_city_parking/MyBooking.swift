@@ -50,7 +50,7 @@ struct MyBooking: View {
                 .padding(.horizontal,20)
                 .padding(.top,5)
             
-            // Booking List
+            
             ScrollView {
                 if selectedT == "Ongoing"{
                     VStack(spacing: 35) {
