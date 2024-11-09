@@ -9,7 +9,9 @@ import SwiftUI
 
 struct ParkingDetails: View {
     var body: some View {
-       Text("Parking Details")
+        Text("Parking Details")
+        Text("Parking Details")
+        Text("Parking Details")
 
     }
 }
