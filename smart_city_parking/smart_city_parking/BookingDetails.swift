@@ -9,10 +9,31 @@ import SwiftUI
 
 struct BookingDetails: View {
     var body: some View {
-        Text("Hello, World!")
-        Text("Booking Details")
-        Text("Hello, World!")
-        Text("Booking Details")
+        VStack{
+            HStack{
+                VStack(alignment: .leading){
+                    Text("ParkSecure")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                    
+                    Text("137 Sir James Pieris Mawatha, Colombo 00200")
+                        .foregroundColor(.gray)
+                        .font(.caption)
+                }
+                Spacer()
+                VStack{
+                    Image("LocationBlue")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                        .padding(.bottom,5)
+                }
+                
+                }
+            .padding(.top,10)
+        }
+        .padding(.horizontal,20)
+        Spacer()
+        
     }
 }
 
