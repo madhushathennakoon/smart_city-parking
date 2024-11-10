@@ -83,7 +83,7 @@ struct Profile: View {
                         }
                         .frame(maxWidth: .infinity)
                     }
-                    .padding(.bottom)
+                    .padding(.bottom,30)
                     
                     
                 }

@@ -9,44 +9,47 @@ import SwiftUI
 
 struct Favourite: View {
     var body: some View {
-        VStack(alignment: .leading) {
-            
-            HStack {
-                Text("Favourite ")
-                    .font(.title2)
-                    .fontWeight(.bold)
+        NavigationView{
+            VStack(alignment: .leading) {
                 
-                Spacer()
-            }
-            .padding(.horizontal,20)
-            
-            
-            
-            ScrollView{
-                VStack(spacing: 15) {
-                    NavigationLink(destination: ParkingDetails()){
-                        FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
-                    }
-                    NavigationLink(destination: ParkingDetails()){
-                        FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
-                    }
-                    NavigationLink(destination: ParkingDetails()){
-                        FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
-                    }
-                    NavigationLink(destination: ParkingDetails()){
-                        FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
-                    }
-                    NavigationLink(destination: ParkingDetails()){
-                        FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
-                    }
+                HStack {
+                    Text("Favourite ")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
                 }
                 .padding(.horizontal,20)
-                .padding(.top,40)
+                
+                
+                
+                ScrollView{
+                    VStack(spacing: 15) {
+                        NavigationLink(destination: ParkingDetails()){
+                            FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                        }
+                        NavigationLink(destination: ParkingDetails()){
+                            FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                        }
+                        NavigationLink(destination: ParkingDetails()){
+                            FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                        }
+                        NavigationLink(destination: ParkingDetails()){
+                            FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                        }
+                        NavigationLink(destination: ParkingDetails()){
+                            FavouriteInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                        }
+                    }
+                    .padding(.horizontal,20)
+                    .padding(.top,40)
+                }
+                
+                
             }
-
+            Spacer()
             
         }
-        Spacer()
         
     }
 }

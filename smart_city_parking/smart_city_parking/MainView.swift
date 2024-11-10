@@ -9,42 +9,36 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        TabView {
-                   // Home Tab
-            Home()
-                       .tabItem {
-                           Image(systemName: "house.fill")
-                           Text("Home")
-                       }
-                   
-                   // Parking Tab
-            SignUp()
-                       .tabItem {
-                           Image(systemName: "magnifyingglass")
-                           Text("Explore")
-                       }
-                   
-                   // Settings Tab
-            ManualLocation()
-                       .tabItem {
-                           Image(systemName: "calendar")
-                           Text("Booking")
-                       }
-            // Settings Tab
-            ManualLocation()
-                        .tabItem {
-                            Image(systemName: "heart")
-                            Text("Favourite")
-                        }
-            // Settings Tab
-            ManualLocation()
-                        .tabItem {
-                            Image(systemName: "person")
-                            Text("Profile")
-                        }
+        TabView{
             
-               }
-               .accentColor(.blue)
+            Home()
+                .tabItem {
+                    Image(systemName: "house.fill")
+                    Text("Home")
+                }
+            Home()
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                    Text("Explore")
+                }
+            MyBooking()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("Booking")
+                }
+            Favourite()
+                .tabItem {
+                    Image(systemName: "heart")
+                    Text("Favourite")
+                }
+            Profile()
+                .tabItem {
+                    Image(systemName: "person")
+                    Text("Profile")
+                }
+            
+            
+        }
     }
 }
 
