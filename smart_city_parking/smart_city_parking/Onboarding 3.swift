@@ -55,7 +55,7 @@ struct Onboarding_3: View {
                 
                 
                 HStack(spacing: 20) {
-                    NavigationLink(destination: Verification_2()){
+                    NavigationLink(destination: SignUp()){
                         Text("Get Started")
                             .fontWeight(.bold)
                             .foregroundColor(.white)

@@ -13,13 +13,7 @@ struct Verification_2: View {
             VStack(spacing: 20) {
                 
                 HStack(spacing: 20) {
-                    Button(action: {
-                        // Add
-                    }) {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.blue)
-                    }
-                    
+                 
                     Spacer()
                 }
                 .padding(.horizontal,20)
@@ -53,7 +47,7 @@ struct Verification_2: View {
                     .padding(.top, 2)
                 
                 
-                NavigationLink(destination: SignIn()){
+                NavigationLink(destination: Location()){
                     Text("Go to Homepage")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -63,9 +57,7 @@ struct Verification_2: View {
                         .font(.headline)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
-                
-                
-                
+            
                 .padding(.horizontal,30)
                 .padding(.top,280)
                 
@@ -74,8 +66,9 @@ struct Verification_2: View {
                 
                 
             }
-            .navigationBarHidden(true)
+            
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

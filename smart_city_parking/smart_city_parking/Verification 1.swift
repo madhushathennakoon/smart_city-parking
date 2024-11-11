@@ -9,15 +9,11 @@ import SwiftUI
 
 struct Verification_1: View {
     var body: some View {
+        NavigationView{
             VStack(spacing: 20) {
                 
                 HStack(spacing: 20) {
-                    Button(action: {
-                        // Add
-                    }) {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor(.blue)
-                    }
+                    
                     Text("Verification")
                         .font(.title2)
                         .fontWeight(.bold)
@@ -25,7 +21,7 @@ struct Verification_1: View {
                 }
                 .padding(.horizontal,20)
                 .padding(.top,20)
-
+                
                 ZStack{
                     Circle()
                         .fill(Color.pink.opacity(0.2))
@@ -35,7 +31,7 @@ struct Verification_1: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 110, height: 110)
                         .background(Circle().fill(Color.pink.opacity(0.2)))
-                        
+                    
                 }
                 .padding(.top,30)
                 
@@ -74,16 +70,11 @@ struct Verification_1: View {
                         .frame(width: 50, height: 50)
                         .background(RoundedRectangle(cornerRadius: 10).stroke(Color.gray))
                         .keyboardType(.numberPad)
-                        
+                    
                 }
                 .padding(.top,10)
                 
-                
-
-               
-                Button(action: {
-                    // Add
-                }) {
+                NavigationLink(destination: Verification_2()){
                     Text("Continue")
                         .frame(maxWidth: .infinity)
                         .padding()
@@ -92,13 +83,13 @@ struct Verification_1: View {
                         .cornerRadius(10)
                         .font(.headline)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                        
+                    
                 }
                 .padding(.horizontal,30)
                 .padding(.top,180)
                 
                 Spacer()
-
+                
                 
                 HStack {
                     Text("Don't receive the code?")
@@ -112,9 +103,10 @@ struct Verification_1: View {
                 }
                 .padding(.bottom)
             }
-            .navigationBarHidden(true)
             
         }
+        .navigationBarBackButtonHidden(true)
+    }
 }
 
 #Preview {

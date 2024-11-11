@@ -29,6 +29,11 @@
 		AE95C8302CDB8CDA00E039C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82F2CDB8CDA00E039C5 /* Location.swift */; };
 		AEB216D22CDC89EE0016C3F3 /* ManualLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */; };
 		AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D32CDC926A0016C3F3 /* Home.swift */; };
+		AEBC7AD22CE1CBFB00768CE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */; };
+		AEBC7AD52CE1CDC200768CE3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD42CE1CDC200768CE3 /* FirebaseAuth */; };
+		AEBC7AD72CE1CDC200768CE3 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD62CE1CDC200768CE3 /* FirebaseCore */; };
+		AEBC7AD92CE1CDC200768CE3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD82CE1CDC200768CE3 /* FirebaseFirestore */; };
+		AEBC7ADB2CE1CDC200768CE3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7ADA2CE1CDC200768CE3 /* FirebaseStorage */; };
 		AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853512CD2266000841149 /* smart_city_parkingApp.swift */; };
 		AED853542CD2266000841149 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* SplashScreenView.swift */; };
 		AED853562CD2266100841149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853552CD2266100841149 /* Assets.xcassets */; };
@@ -78,6 +83,7 @@
 		AE95C82F2CDB8CDA00E039C5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLocation.swift; sourceTree = "<group>"; };
 		AEB216D32CDC926A0016C3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
 		AED853532CD2266000841149 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -95,6 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBC7AD72CE1CDC200768CE3 /* FirebaseCore in Frameworks */,
+				AEBC7ADB2CE1CDC200768CE3 /* FirebaseStorage in Frameworks */,
+				AEBC7AD52CE1CDC200768CE3 /* FirebaseAuth in Frameworks */,
+				AEBC7AD92CE1CDC200768CE3 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +148,19 @@
 		AED853502CD2266000841149 /* smart_city_parking */ = {
 			isa = PBXGroup;
 			children = (
+				AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */,
 				AED853512CD2266000841149 /* smart_city_parkingApp.swift */,
 				AED853532CD2266000841149 /* SplashScreenView.swift */,
 				AE51E1E72CD9EACA00444207 /* Onboarding 1.swift */,
+				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
+				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
+				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
+				AE95C8292CDB647100E039C5 /* Verification 1.swift */,
+				AE95C82B2CDB826900E039C5 /* Verification 2.swift */,
+				AE95C82D2CDB85BF00E039C5 /* SignIn.swift */,
+				AE95C82F2CDB8CDA00E039C5 /* Location.swift */,
+				AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */,
+				AE61C1112CDDE47F00C59148 /* MainView.swift */,
 				272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */,
 				AE81E8222CDF2B8C0070A4A1 /* SelectVehicle.swift */,
 				AE81E8242CDF2F470070A4A1 /* SelectParkingSlot.swift */,
@@ -151,17 +171,8 @@
 				AE81E82E2CDF92AB0070A4A1 /* Favourite.swift */,
 				AE81E8302CDF9E650070A4A1 /* Profile.swift */,
 				AE81E8322CDFA69D0070A4A1 /* Notifications.swift */,
-				AE95C8232CDB337A00E039C5 /* Onboarding 2.swift */,
-				AE95C8252CDB404300E039C5 /* Onboarding 3.swift */,
-				AE95C8272CDB42F100E039C5 /* SignUp.swift */,
-				AE95C8292CDB647100E039C5 /* Verification 1.swift */,
-				AE95C82B2CDB826900E039C5 /* Verification 2.swift */,
-				AE95C82F2CDB8CDA00E039C5 /* Location.swift */,
-				AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */,
 				AEB216D32CDC926A0016C3F3 /* Home.swift */,
 				AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */,
-				AE61C1112CDDE47F00C59148 /* MainView.swift */,
-				AE95C82D2CDB85BF00E039C5 /* SignIn.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
 				AED853572CD2266100841149 /* Preview Content */,
 			);
@@ -209,6 +220,12 @@
 			dependencies = (
 			);
 			name = smart_city_parking;
+			packageProductDependencies = (
+				AEBC7AD42CE1CDC200768CE3 /* FirebaseAuth */,
+				AEBC7AD62CE1CDC200768CE3 /* FirebaseCore */,
+				AEBC7AD82CE1CDC200768CE3 /* FirebaseFirestore */,
+				AEBC7ADA2CE1CDC200768CE3 /* FirebaseStorage */,
+			);
 			productName = smart_city_parking;
 			productReference = AED8534E2CD2266000841149 /* smart_city_parking.app */;
 			productType = "com.apple.product-type.application";
@@ -281,6 +298,9 @@
 				Base,
 			);
 			mainGroup = AED853452CD2266000841149;
+			packageReferences = (
+				AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AED8534F2CD2266000841149 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,6 +319,7 @@
 			files = (
 				AED853592CD2266100841149 /* Preview Assets.xcassets in Resources */,
 				AED853562CD2266100841149 /* Assets.xcassets in Resources */,
+				AEBC7AD22CE1CBFB00768CE3 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +691,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AEBC7AD42CE1CDC200768CE3 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		AEBC7AD62CE1CDC200768CE3 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		AEBC7AD82CE1CDC200768CE3 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		AEBC7ADA2CE1CDC200768CE3 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AEBC7AD32CE1CDC200768CE3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AED853462CD2266000841149 /* Project object */;
 }
