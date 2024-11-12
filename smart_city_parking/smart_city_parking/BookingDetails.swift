@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookingDetails: View {
+    @ObservedObject var model = viewModel()
+    
     var body: some View {
         VStack{
             HStack{
@@ -19,6 +21,9 @@ struct BookingDetails: View {
                     Text("137 Sir James Pieris Mawatha, Colombo 00200")
                         .foregroundColor(.gray)
                         .font(.caption)
+                    
+                 
+                    
                 }
                 Spacer()
                 VStack{
@@ -34,7 +39,24 @@ struct BookingDetails: View {
         .padding(.horizontal,20)
         Spacer()
         
+        Text("hello")
+        
+        List(model.list) {item in
+            Text(item.name)
+        }
+       
+        
+        
+        Spacer()
+        
+        
+        
     }
+    
+    init() {
+        model.getData()
+    }
+    
 }
 
 #Preview {

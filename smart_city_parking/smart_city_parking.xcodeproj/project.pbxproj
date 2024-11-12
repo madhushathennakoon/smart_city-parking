@@ -29,6 +29,8 @@
 		AE95C8302CDB8CDA00E039C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82F2CDB8CDA00E039C5 /* Location.swift */; };
 		AEB216D22CDC89EE0016C3F3 /* ManualLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */; };
 		AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D32CDC926A0016C3F3 /* Home.swift */; };
+		AEBC40802CE3726300488696 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC407F2CE3726300488696 /* userModel.swift */; };
+		AEBC40822CE3736400488696 /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC40812CE3736400488696 /* viewModel.swift */; };
 		AEBC7AD22CE1CBFB00768CE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */; };
 		AEBC7AD52CE1CDC200768CE3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD42CE1CDC200768CE3 /* FirebaseAuth */; };
 		AEBC7AD72CE1CDC200768CE3 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD62CE1CDC200768CE3 /* FirebaseCore */; };
@@ -83,6 +85,8 @@
 		AE95C82F2CDB8CDA00E039C5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLocation.swift; sourceTree = "<group>"; };
 		AEB216D32CDC926A0016C3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		AEBC407F2CE3726300488696 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		AEBC40812CE3736400488696 /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
 		AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				AE95C8292CDB647100E039C5 /* Verification 1.swift */,
 				AE95C82B2CDB826900E039C5 /* Verification 2.swift */,
 				AE95C82D2CDB85BF00E039C5 /* SignIn.swift */,
+				AEBC407F2CE3726300488696 /* userModel.swift */,
+				AEBC40812CE3736400488696 /* viewModel.swift */,
 				AE95C82F2CDB8CDA00E039C5 /* Location.swift */,
 				AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */,
 				AE61C1112CDDE47F00C59148 /* MainView.swift */,
@@ -362,10 +368,12 @@
 				AE81E82B2CDF76570070A4A1 /* SuccessView.swift in Sources */,
 				AE95C82A2CDB647100E039C5 /* Verification 1.swift in Sources */,
 				AE95C8242CDB337A00E039C5 /* Onboarding 2.swift in Sources */,
+				AEBC40822CE3736400488696 /* viewModel.swift in Sources */,
 				AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */,
 				AE81E82F2CDF92AB0070A4A1 /* Favourite.swift in Sources */,
 				AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */,
 				AE81E8232CDF2B8C0070A4A1 /* SelectVehicle.swift in Sources */,
+				AEBC40802CE3726300488696 /* userModel.swift in Sources */,
 				AE81E8292CDF698C0070A4A1 /* PaymentMethod.swift in Sources */,
 				272E504B2CDEEAB1001E01F2 /* BookingDetails.swift in Sources */,
 			);

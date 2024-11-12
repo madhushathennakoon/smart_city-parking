@@ -17,7 +17,8 @@ struct smart_city_parkingApp: App {
     
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+//            SplashScreenView()
+            BookingDetails()
             
             
             
