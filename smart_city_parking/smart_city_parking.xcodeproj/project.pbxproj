@@ -27,6 +27,7 @@
 		AE95C82C2CDB826900E039C5 /* Verification 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82B2CDB826900E039C5 /* Verification 2.swift */; };
 		AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82D2CDB85BF00E039C5 /* SignIn.swift */; };
 		AE95C8302CDB8CDA00E039C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82F2CDB8CDA00E039C5 /* Location.swift */; };
+		AEA98E102CEB5A750094A685 /* test01.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA98E0F2CEB5A750094A685 /* test01.swift */; };
 		AEB216D22CDC89EE0016C3F3 /* ManualLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */; };
 		AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D32CDC926A0016C3F3 /* Home.swift */; };
 		AEBC40802CE3726300488696 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBC407F2CE3726300488696 /* userModel.swift */; };
@@ -83,6 +84,7 @@
 		AE95C82B2CDB826900E039C5 /* Verification 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Verification 2.swift"; sourceTree = "<group>"; };
 		AE95C82D2CDB85BF00E039C5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		AE95C82F2CDB8CDA00E039C5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		AEA98E0F2CEB5A750094A685 /* test01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test01.swift; sourceTree = "<group>"; };
 		AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLocation.swift; sourceTree = "<group>"; };
 		AEB216D32CDC926A0016C3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		AEBC407F2CE3726300488696 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				AE61C1112CDDE47F00C59148 /* MainView.swift */,
 				272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */,
 				AE81E8222CDF2B8C0070A4A1 /* SelectVehicle.swift */,
+				AEA98E0F2CEB5A750094A685 /* test01.swift */,
 				AE81E8242CDF2F470070A4A1 /* SelectParkingSlot.swift */,
 				AE81E8262CDF486B0070A4A1 /* ReviewSummary.swift */,
 				AE81E8282CDF698C0070A4A1 /* PaymentMethod.swift */,
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEA98E102CEB5A750094A685 /* test01.swift in Sources */,
 				AE81E8332CDFA69D0070A4A1 /* Notifications.swift in Sources */,
 				AE81E8272CDF486B0070A4A1 /* ReviewSummary.swift in Sources */,
 				AE81E82D2CDF81270070A4A1 /* MyBooking.swift in Sources */,

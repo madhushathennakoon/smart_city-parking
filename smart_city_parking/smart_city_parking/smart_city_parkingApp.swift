@@ -11,17 +11,21 @@ import FirebaseCore
 @main
 struct smart_city_parkingApp: App {
     
+    @StateObject private var vehicleModel = VehicleModel()
+    
     init(){
         FirebaseApp.configure()
     }
+  
     
     var body: some Scene {
         WindowGroup {
-//            SplashScreenView()
-            BookingDetails()
-            
-            
-            
+            SplashScreenView()
+                .environmentObject(vehicleModel)
+
+              
+ 
         }
+        
     }
 }
