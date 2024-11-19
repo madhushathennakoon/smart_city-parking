@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Location: View {
+    
+    
+    
     var body: some View {
         
         VStack(spacing: 20) {
@@ -64,6 +67,8 @@ struct Location: View {
                     )
             }
             .padding(.horizontal,20)
+            
+            
             
             
             Spacer()

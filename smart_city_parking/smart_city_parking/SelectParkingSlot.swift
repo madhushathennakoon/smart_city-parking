@@ -8,7 +8,17 @@
 import SwiftUI
 
 struct SelectParkingSlot: View {
-    @State private var selectedVehicle = 0
+    
+    @State private var slots = [
+        Slot(number: "A0"),
+        Slot(number: "A1"),
+        Slot(number: "A2"),
+        Slot(number: "A3"),
+        Slot(number: "A4"),
+        Slot(number: "A5")
+        
+    ]
+    
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -59,6 +69,19 @@ struct SelectParkingSlot: View {
             .padding(.top,30)
             
             
+            ScrollView {
+                VStack(spacing: 15) {
+//                    ForEach(slots, id: \.self) { Slot in
+//                        SlotRow(slot: Slot)
+//                            
+//                            
+//                    }
+                }
+                .padding(.horizontal)
+            }
+            .padding(.top)
+            
+            
             Spacer()
             
             
@@ -68,8 +91,43 @@ struct SelectParkingSlot: View {
 }
 
 
+struct SlotRow: View {
+    var vehicle: Vehicle
+    var isSelected: Bool
+    
+    var body: some View {
+        HStack {
+            Image("CarBlue1") // Placeholder image, replace with your actual image
+                .resizable()
+                .frame(width: 50, height: 50)
+                .padding(.trailing, 10)
+            
+            VStack(alignment: .leading) {
+                Text(vehicle.name)
+                    .font(.headline)
+                Text(vehicle.number)
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+                
+            }
+            
+            Spacer()
+            
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                .foregroundColor(isSelected ? .blue : .gray)
+        }
+        .padding()
+        .background(Color.gray.opacity(0.1))
+        .cornerRadius(10)
+    }
+}
 
 
+
+struct Slot: Identifiable, Hashable {
+    var id: String { number } 
+    var number: String
+}
 
 
 

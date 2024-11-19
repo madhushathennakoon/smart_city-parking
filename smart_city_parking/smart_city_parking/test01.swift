@@ -3,6 +3,7 @@ import SwiftUI
 struct VehicleDetailsView: View {
     // Access the global vehicle model
     @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var parkname: ParkName
     
     var body: some View {
         VStack {
@@ -19,8 +20,13 @@ struct VehicleDetailsView: View {
                     .font(.subheadline)
                     .padding()
             }
+            
+            Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
         }
-        .navigationBarTitle("Vehicle Details")
+        
+        
+        
+        
         .padding()
     }
 }
@@ -29,5 +35,7 @@ struct VehicleDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         VehicleDetailsView()
             .environmentObject(VehicleModel()) // Inject the same EnvironmentObject here
+            .environmentObject(ParkName())
     }
 }
+

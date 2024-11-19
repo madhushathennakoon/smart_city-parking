@@ -10,10 +10,13 @@ import SwiftUI
 // store the selected vehicle in global variable
 class VehicleModel: ObservableObject {
     @Published var selectedVehicle: Vehicle? = nil
+    
 }
 
 struct SelectVehicle: View {
     @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var parkname: ParkName
+    
     @State private var vehicles = [
         Vehicle(name: "Toyota Fortuner", number: "CAK 9191"),
         Vehicle(name: "Honda CR-V", number: "ABC 1234"),
@@ -43,6 +46,11 @@ struct SelectVehicle: View {
                     }
                 }
                 .padding(.horizontal, 20)
+                
+                
+//                Text("hello")
+//                Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
+                
                 
                 // Vehicle List
                 ScrollView {
@@ -138,6 +146,7 @@ struct SelectVehicle_Previews: PreviewProvider {
     static var previews: some View {
         SelectVehicle()
             .environmentObject(VehicleModel()) // Inject the VehicleModel as an EnvironmentObject
+            .environmentObject(ParkName())
     }
 }
 

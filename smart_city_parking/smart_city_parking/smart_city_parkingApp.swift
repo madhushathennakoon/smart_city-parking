@@ -12,6 +12,8 @@ import FirebaseCore
 struct smart_city_parkingApp: App {
     
     @StateObject private var vehicleModel = VehicleModel()
+    @StateObject private var parkName = ParkName()
+   
     
     init(){
         FirebaseApp.configure()
@@ -21,9 +23,9 @@ struct smart_city_parkingApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
+                .environmentObject(parkName)
                 .environmentObject(vehicleModel)
-
-              
+                
  
         }
         
