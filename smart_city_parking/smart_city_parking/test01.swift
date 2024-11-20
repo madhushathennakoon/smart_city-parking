@@ -4,6 +4,7 @@ struct VehicleDetailsView: View {
     // Access the global vehicle model
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
     
     var body: some View {
         VStack {
@@ -22,6 +23,21 @@ struct VehicleDetailsView: View {
             }
             
             Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
+            
+            if let selectedSlot = slotName.selectedSlot {
+                Text("Selected Slot:")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                Text("\(selectedSlot.name)")
+                    .font(.headline)
+                    .padding()
+            } else {
+                Text("No slot selected.")
+                    .font(.subheadline)
+                    .padding()
+            }
+           
         }
         
         
@@ -36,6 +52,10 @@ struct VehicleDetailsView_Previews: PreviewProvider {
         VehicleDetailsView()
             .environmentObject(VehicleModel()) // Inject the same EnvironmentObject here
             .environmentObject(ParkName())
+            .environmentObject(SlotName())
     }
 }
+
+
+
 

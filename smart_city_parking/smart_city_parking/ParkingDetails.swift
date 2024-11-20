@@ -14,16 +14,14 @@ class ParkName: ObservableObject {
 
 struct ParkingDetails: View {
     @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var vehicleModel: VehicleModel
     
     @State private var selectedTab = "About"
     @State private var parkingName = "ZXY"
     @State private var navigateToDetail = false
     @State private var test: String = ""
-    
-    
-   
-    
-    
+
     var body: some View {
         NavigationStack{
             VStack(alignment: .leading) {
@@ -211,6 +209,7 @@ struct ParkingDetails_Previews: PreviewProvider {
         ParkingDetails()
             .environmentObject(ParkName())
             .environmentObject(VehicleModel())
+            .environmentObject(SlotName())
     }
 }
 

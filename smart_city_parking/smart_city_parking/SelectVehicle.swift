@@ -16,6 +16,7 @@ class VehicleModel: ObservableObject {
 struct SelectVehicle: View {
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
     
     @State private var vehicles = [
         Vehicle(name: "Toyota Fortuner", number: "CAK 9191"),
@@ -83,7 +84,7 @@ struct SelectVehicle: View {
                 }
                 
                 
-                NavigationLink(destination: VehicleDetailsView()){
+                NavigationLink(destination: SelectParkingSlot()){
                     Text("Continue")
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity)
@@ -138,15 +139,12 @@ struct Vehicle: Identifiable, Hashable {
     var number: String
 }
 
-
-
-
-
 struct SelectVehicle_Previews: PreviewProvider {
     static var previews: some View {
         SelectVehicle()
-            .environmentObject(VehicleModel()) // Inject the VehicleModel as an EnvironmentObject
+            .environmentObject(VehicleModel()) 
             .environmentObject(ParkName())
+            .environmentObject(SlotName())
     }
 }
 
