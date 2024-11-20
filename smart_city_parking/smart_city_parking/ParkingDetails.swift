@@ -16,6 +16,7 @@ struct ParkingDetails: View {
     @EnvironmentObject var parkname: ParkName
     @EnvironmentObject var slotName: SlotName
     @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var bookingData: BookingData
     
     @State private var selectedTab = "About"
     @State private var parkingName = "ZXY"
@@ -173,9 +174,7 @@ struct ParkingDetails: View {
                 Button(action: {
                     parkname.selectedPark = parkingName
                     navigateToDetail.toggle()
-                    
-                    
-                
+           
                 }) {
                     Text("Book Slot")
                         .fontWeight(.bold)
@@ -190,7 +189,7 @@ struct ParkingDetails: View {
                 .padding()
                 
                 .navigationDestination(isPresented: $navigateToDetail) {
-                    SelectVehicle()
+                    BookingDetails()
 //                        .environmentObject(ParkName())
 //                        .environmentObject(VehicleModel())
                         
@@ -210,6 +209,7 @@ struct ParkingDetails_Previews: PreviewProvider {
             .environmentObject(ParkName())
             .environmentObject(VehicleModel())
             .environmentObject(SlotName())
+            .environmentObject(BookingData())
     }
 }
 

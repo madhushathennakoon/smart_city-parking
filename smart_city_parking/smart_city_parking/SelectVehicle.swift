@@ -17,6 +17,7 @@ struct SelectVehicle: View {
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
     @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var bookingData: BookingData
     
     @State private var vehicles = [
         Vehicle(name: "Toyota Fortuner", number: "CAK 9191"),
@@ -145,6 +146,7 @@ struct SelectVehicle_Previews: PreviewProvider {
             .environmentObject(VehicleModel()) 
             .environmentObject(ParkName())
             .environmentObject(SlotName())
+            .environmentObject(BookingData())
     }
 }
 

@@ -5,6 +5,19 @@ struct VehicleDetailsView: View {
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
     @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var bookingData: BookingData
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        return formatter
+    }
+    
+    var amPmTimeFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        return formatter
+    }
     
     var body: some View {
         VStack {
@@ -37,7 +50,11 @@ struct VehicleDetailsView: View {
                     .font(.subheadline)
                     .padding()
             }
+            
            
+            Text(dateFormatter.string(from: bookingData.selectedDate))
+            Text(amPmTimeFormatter.string(from: bookingData.selectedArriveTime))
+            Text(amPmTimeFormatter.string(from: bookingData.selectedExitTime)) 
         }
         
         
@@ -53,6 +70,7 @@ struct VehicleDetailsView_Previews: PreviewProvider {
             .environmentObject(VehicleModel()) // Inject the same EnvironmentObject here
             .environmentObject(ParkName())
             .environmentObject(SlotName())
+            .environmentObject(BookingData())
     }
 }
 

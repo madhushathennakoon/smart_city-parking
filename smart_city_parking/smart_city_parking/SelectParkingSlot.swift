@@ -16,6 +16,7 @@ struct SelectParkingSlot: View {
     @EnvironmentObject var slotName: SlotName
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var bookingData: BookingData
     
     @State private var spots1 = [
         spot(name: "A0 "),
@@ -198,6 +199,7 @@ struct SelectVehicleView_Previews: PreviewProvider {
             .environmentObject(SlotName())
             .environmentObject(VehicleModel())
             .environmentObject(ParkName())
+            .environmentObject(BookingData())
     }
 }
 

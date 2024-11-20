@@ -14,6 +14,7 @@ struct smart_city_parkingApp: App {
     @StateObject private var vehicleModel = VehicleModel()
     @StateObject private var parkName = ParkName()
     @StateObject private var slotName = SlotName()
+    @StateObject private var bookingData = BookingData()
    
     
     init(){
