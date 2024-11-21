@@ -6,6 +6,7 @@ struct VehicleDetailsView: View {
     @EnvironmentObject var parkname: ParkName
     @EnvironmentObject var slotName: SlotName
     @EnvironmentObject var bookingData: BookingData
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -42,6 +43,8 @@ struct VehicleDetailsView: View {
             
             
             Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
+            Text("User ID: \(authViewModel.userID ?? "Not logged in")")
+            
             
             if let selectedSlot = slotName.selectedSlot {
                 Text("Selected Slot:")
@@ -77,6 +80,7 @@ struct VehicleDetailsView_Previews: PreviewProvider {
             .environmentObject(ParkName())
             .environmentObject(SlotName())
             .environmentObject(BookingData())
+            .environmentObject(AuthViewModel())
     }
 }
 

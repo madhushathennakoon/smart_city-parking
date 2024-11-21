@@ -15,6 +15,7 @@ struct smart_city_parkingApp: App {
     @StateObject private var parkName = ParkName()
     @StateObject private var slotName = SlotName()
     @StateObject private var bookingData = BookingData()
+    @StateObject private var authViewModel = AuthViewModel()
    
     
     init(){
@@ -28,6 +29,8 @@ struct smart_city_parkingApp: App {
                 .environmentObject(parkName)
                 .environmentObject(vehicleModel)
                 .environmentObject(slotName)
+                .environmentObject(bookingData)
+                .environmentObject(authViewModel)
                 
  
         }

@@ -8,6 +8,10 @@
 import SwiftUI
 import FirebaseAuth
 
+class AuthViewModel: ObservableObject {
+    @Published var userID: String? = nil
+}
+
 struct SignUp: View {
     @State private var username: String = ""
     @State private var email: String = ""
@@ -15,6 +19,12 @@ struct SignUp: View {
     @State private var navigateToLocation: Bool = false
     @State private var showAlert: Bool = false
     @State private var alertMessage: String = ""
+    
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var bookingData: BookingData
     
     
     var body: some View {
@@ -106,6 +116,10 @@ struct SignUp: View {
                         if authResult != nil {
                             
                             navigateToLocation = true
+                            
+                            print(authResult?.user.uid as Any)
+                            
+                            authViewModel.userID = authResult?.user.uid
                             
                         }
                     }
@@ -203,6 +217,18 @@ struct SignUp: View {
     }
 }
 
-#Preview {
-    SignUp()
+//#Preview {
+//    SignUp()
+//}
+
+struct SignUp_Previews: PreviewProvider {
+    static var previews: some View {
+        SignUp()
+            .environmentObject(AuthViewModel())
+            .environmentObject(ParkName())
+            .environmentObject(VehicleModel())
+            .environmentObject(SlotName())
+            .environmentObject(BookingData())
+            
+    }
 }

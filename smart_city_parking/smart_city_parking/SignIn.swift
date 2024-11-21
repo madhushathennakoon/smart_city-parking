@@ -15,6 +15,12 @@ struct SignIn: View {
     @State private var showAlert: Bool = false
     @State private var alertMessage: String = ""
     
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var bookingData: BookingData
+    
     
     var body: some View {
         NavigationStack{
@@ -91,6 +97,8 @@ struct SignIn: View {
                         if authResult != nil {
                             
                             navigateToLocation = true
+                            print(authResult?.user.uid as Any)
+                            authViewModel.userID = authResult?.user.uid
                             
                         }
                     }
@@ -189,4 +197,9 @@ struct SignIn: View {
 
 #Preview {
     SignIn()
+        .environmentObject(AuthViewModel())
+        .environmentObject(ParkName())
+        .environmentObject(VehicleModel())
+        .environmentObject(SlotName())
+        .environmentObject(BookingData())
 }

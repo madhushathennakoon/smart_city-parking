@@ -17,6 +17,7 @@ struct SelectParkingSlot: View {
     @EnvironmentObject var vehicleModel: VehicleModel
     @EnvironmentObject var parkname: ParkName
     @EnvironmentObject var bookingData: BookingData
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     @State private var spots1 = [
         spot(name: "A0 "),
@@ -45,109 +46,111 @@ struct SelectParkingSlot: View {
     
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Select Parking Slot")
-                    .font(.title2)
-                    .fontWeight(.bold)
+        NavigationStack{
+            VStack(alignment: .leading) {
+                HStack {
+                    Text("Select Parking Slot")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal,20)
+                
+                
+                VStack {
+                    HStack(spacing: 118) {
+                        Text("A")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .padding(8)
+                            .background(Color.pink.opacity(0.2))
+                            .cornerRadius(5)
+                        
+                        
+                        Text("Entry")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .padding(8)
+                            .background(Color.pink.opacity(0.2))
+                            .cornerRadius(5)
+                        
+                        
+                        Text("B")
+                            .font(.headline)
+                            .fontWeight(.bold)
+                            .padding(8)
+                            .background(Color.pink.opacity(0.2))
+                            .cornerRadius(5)
+                    }
+                }
+                .padding(.horizontal,20)
+                .padding(.top,20)
+                .padding(.bottom,20)
+                
+                
+                HStack {
+                    VStack {
+                        ScrollView {
+                            VStack(spacing: 10) { // Reduced vertical spacing between rows
+                                ForEach(spots1, id: \.self) { slot in
+                                    Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
+                                        .onTapGesture {
+                                            slotName.selectedSlot = slot
+                                        }
+                                }
+                            }
+                            .padding(.horizontal, 25) // Reduced horizontal padding
+                        }
+                    }
+                    
+                    VStack {
+                        ScrollView {
+                            VStack(spacing: 10) { // Reduced vertical spacing between rows
+                                ForEach(spots2, id: \.self) { slot in
+                                    Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
+                                        .onTapGesture {
+                                            slotName.selectedSlot = slot
+                                        }
+                                }
+                            }
+                            .padding(.horizontal, 25) // Reduced horizontal padding
+                        }
+                    }
+                }
+                .padding(.horizontal, 0) // Reduced horizontal padding
+                
+                
+                if let selectedVehicle = slotName.selectedSlot {
+                    Text("Selected Vehicle:")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+                    
+                    Text("\(selectedVehicle.name)")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                        .padding(.horizontal)
+                }
+                
+                // Continue Button
+                NavigationLink(destination: ReviewSummary()) {
+                    Text("Continue")
+                        .fontWeight(.bold)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .padding(.horizontal)
+                .padding(.bottom)
                 
                 Spacer()
-            }
-            .padding(.horizontal,20)
-          
-            
-            VStack {
-                HStack(spacing: 118) {
-                    Text("A")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(8)
-                        .background(Color.pink.opacity(0.2))
-                        .cornerRadius(5)
-                    
-                    
-                    Text("Entry")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(8)
-                        .background(Color.pink.opacity(0.2))
-                        .cornerRadius(5)
-                    
-                    
-                    Text("B")
-                        .font(.headline)
-                        .fontWeight(.bold)
-                        .padding(8)
-                        .background(Color.pink.opacity(0.2))
-                        .cornerRadius(5)
-                }
-            }
-            .padding(.horizontal,20)
-            .padding(.top,20)
-            .padding(.bottom,20)
-            
-            
-            HStack {
-                VStack {
-                    ScrollView {
-                        VStack(spacing: 10) { // Reduced vertical spacing between rows
-                            ForEach(spots1, id: \.self) { slot in
-                                Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
-                                    .onTapGesture {
-                                        slotName.selectedSlot = slot
-                                    }
-                            }
-                        }
-                        .padding(.horizontal, 25) // Reduced horizontal padding
-                    }
-                }
                 
-                VStack {
-                    ScrollView {
-                        VStack(spacing: 10) { // Reduced vertical spacing between rows
-                            ForEach(spots2, id: \.self) { slot in
-                                Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
-                                    .onTapGesture {
-                                        slotName.selectedSlot = slot
-                                    }
-                            }
-                        }
-                        .padding(.horizontal, 25) // Reduced horizontal padding
-                    }
-                }
             }
-            .padding(.horizontal, 0) // Reduced horizontal padding
-            
-            
-            if let selectedVehicle = slotName.selectedSlot {
-                Text("Selected Vehicle:")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
-                
-                Text("\(selectedVehicle.name)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .padding(.horizontal)
-            }
-            
-            // Continue Button
-            NavigationLink(destination: ReviewSummary()) {
-                Text("Continue")
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-            }
-            .padding(.horizontal)
-            .padding(.bottom)
-            
-            Spacer()
-            
+            .padding(.top)
         }
-        .padding(.top)
     }
 }
 
@@ -195,11 +198,14 @@ struct spot: Identifiable, Hashable {
 
 struct SelectVehicleView_Previews: PreviewProvider {
     static var previews: some View {
+        
         SelectParkingSlot()
             .environmentObject(SlotName())
             .environmentObject(VehicleModel())
             .environmentObject(ParkName())
             .environmentObject(BookingData())
+            .environmentObject(AuthViewModel())
+        
     }
 }
 
