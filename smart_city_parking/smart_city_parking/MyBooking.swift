@@ -6,266 +6,139 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct MyBooking: View {
-    @State private var selectedT = "Ongoing"
-    
+    @EnvironmentObject var authViewModel: AuthViewModel
+    @State private var bookings: [Booking] = []
     
     var body: some View {
-        VStack(alignment: .leading) {
-            
-            HStack {
-                Text("My Booking")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                
-                Spacer()
-            }
-            .padding(.horizontal,20)
-            
-            
-            HStack {
-                Button(action: {
-                    selectedT = "Ongoing"
-                }) {
-                    Text("Ongoing")
-                        .fontWeight(selectedT == "Ongoing" ? .bold : .regular)
-                        .foregroundColor(selectedT == "Ongoing" ? .blue : .gray)
-                }
-                
-                Spacer()
-                
-                Button(action: {
-                    selectedT = "Completed"
-                }) {
-                    Text("Completed")
-                        .fontWeight(selectedT == "Completed" ? .bold : .regular)
-                        .foregroundColor(selectedT == "Completed" ? .blue : .gray)
-                }
-            }
-            .padding(.horizontal,20)
-            .padding(.top,25)
-            
-            Divider()
-                .padding(.horizontal,20)
-                .padding(.top,5)
-            
+        VStack {
+            Text("Booking History")
+                .font(.largeTitle)
+                .fontWeight(.semibold)
+                .foregroundColor(.black)
+                .padding(.bottom, 10)
             
             ScrollView {
-                if selectedT == "Ongoing"{
-                    VStack(spacing: 35) {
-                        BookingCardOngoing(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "Ongoing", price: "100", slot: "28"  )
-                        BookingCardOngoing(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "Ongoing", price: "100", slot: "28"  )
-                        BookingCardOngoing(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "Ongoing", price: "100", slot: "28"  )
+                VStack(spacing: 15) {
+                    ForEach(bookings) { booking in
+                        BookingCard(booking: booking)
+                            .shadow(radius: 5)
                     }
-                    .padding(.horizontal,20)
-                    .padding(.top,15)
-                }else{
-                    VStack(spacing: 35) {
-                        BookingCardCompleted(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "Completed", price: "100", slot: "28"  )
-                    }
-                    .padding(.horizontal,20)
-                    .padding(.top,15)
                 }
-                
+                .padding()
             }
-            
-            Spacer()
-            
-            
         }
-        .padding(.top)
+        .onAppear(perform: fetchBookings)
+        .background(Color(.systemGroupedBackground))
+        .navigationTitle("Bookings")
+    }
+    
+    
+    func fetchBookings() {
         
+        guard let userID = authViewModel.userID else {
+            print("User is not logged in")
+            return
+        }
+        
+        let db = Firestore.firestore()
+        
+        
+        db.collection("Users").document(userID).collection("Bookings")
+            .order(by: "timestamp", descending: true)
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error fetching bookings: \(error.localizedDescription)")
+                } else {
+                    
+                    bookings = snapshot?.documents.compactMap { doc in
+                        let data = doc.data()
+                        return Booking(
+                            id: doc.documentID,
+                            parkingName: data["parkingName"] as? String ?? "N/A",
+                            arrivingTime: data["arrivingTime"] as? String ?? "N/A",
+                            exitTime: data["exitTime"] as? String ?? "N/A",
+                            vehicle: data["vehicle"] as? String ?? "N/A",
+                            slot: data["slot"] as? String ?? "N/A",
+                            amount: data["amount"] as? String ?? "N/A"
+                        )
+                    } ?? []
+                }
+            }
     }
 }
 
 
-
-struct BookingCardOngoing: View {
-    var imgName: String
-    var parkingCTGY: String
-    var rating: String
-    var parkingName: String
-    var price: String
-    var slot: String
+struct BookingCard: View {
+    var booking: Booking
     
     var body: some View {
-        HStack(alignment: .top, spacing: 15) {
-            Image(imgName)
-                .resizable()
-                .frame(width: 125, height: 125)
-                .cornerRadius(10)
-            VStack(alignment: .leading, spacing: 10) {
-                HStack{
-                    Text(parkingCTGY)
-                        .font(.footnote)
-                        .bold()
-                        .padding(5)
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(5)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                    Image("Star")
-                        .resizable()
-                        .frame(width: 17, height: 17)
-                    Text(rating)
-                        .font(.footnote)
-                        .bold()
-                        .foregroundColor(.black)
-                }
-                .padding(.bottom,45)
-                
-                HStack{
-                    Text(parkingName)
-                        .font(.caption)
-                        .bold()
-                    Spacer()
-                    
-                    Text("Rs." + price)
-                        .foregroundColor(.red)
-                        .font(.caption)
-                        .bold()
-                        .padding(.trailing,-6)
-                    Text("/hr")
-                        .foregroundColor(.gray)
-                        .font(.system(size: 11))
-                }
-                .padding(.top,-30)
-                
-                
-                HStack{
-                    Image("CarBlue")
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                    Text(slot + " Spots")
-                        .font(.footnote)
-                        .bold()
-                        .foregroundColor(.black)
-                }
- 
-                
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text(booking.parkingName)
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                Spacer()
+                Text(booking.amount)
+                    .font(.headline)
+                    .foregroundColor(.green)
             }
-  
+            
+            Divider()
+            
+            VStack(alignment: .leading, spacing: 5) {
+                HStack {
+                    Image(systemName: "clock")
+                        .foregroundColor(.blue)
+                    Text("Arriving: \(booking.arrivingTime)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                
+                HStack {
+                    Image(systemName: "clock.arrow.circlepath")
+                        .foregroundColor(.blue)
+                    Text("Exit: \(booking.exitTime)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                
+                HStack {
+                    Image(systemName: "car.fill")
+                        .foregroundColor(.blue)
+                    Text("Vehicle: \(booking.vehicle)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                
+                HStack {
+                    Image(systemName: "parkingsign.circle.fill")
+                        .foregroundColor(.blue)
+                    Text("Slot: \(booking.slot)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
         }
         .padding()
         .background(Color.white)
         .cornerRadius(10)
-        .shadow(radius: 5)
-        
-        
-        HStack {
-            
-            Button(action: {
-                //action
-            }) {
-                Text("Timer")
-                    .fontWeight(.bold)
-                    .foregroundColor(.pink)
-                    .padding(8)
-                    .frame(maxWidth: .infinity)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.pink, lineWidth: 2)
-                    )
-            }
-            Button(action: {
-                //action
-            }) {
-                Text("E-Ticket")
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .padding(8)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-            }
-        }
-        .padding(.top, -15)
- 
     }
 }
 
-
-struct BookingCardCompleted: View {
-    var imgName: String
-    var parkingCTGY: String
-    var rating: String
+struct Booking: Identifiable {
+    var id: String
     var parkingName: String
-    var price: String
+    var arrivingTime: String
+    var exitTime: String
+    var vehicle: String
     var slot: String
-    
-    var body: some View {
-        HStack(alignment: .top, spacing: 15) {
-            Image(imgName)
-                .resizable()
-                .frame(width: 125, height: 125)
-                .cornerRadius(10)
-            VStack(alignment: .leading, spacing: 10) {
-                HStack{
-                    Text(parkingCTGY)
-                        .font(.footnote)
-                        .bold()
-                        .padding(5)
-                        .background(Color.blue.opacity(0.2))
-                        .cornerRadius(5)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                    Spacer()
-                    Image("Star")
-                        .resizable()
-                        .frame(width: 17, height: 17)
-                    Text(rating)
-                        .font(.footnote)
-                        .bold()
-                        .foregroundColor(.black)
-                }
-                .padding(.bottom,45)
-                
-                HStack{
-                    Text(parkingName)
-                        .font(.caption)
-                        .bold()
-                    Spacer()
-                    
-                    Text("Rs." + price)
-                        .foregroundColor(.red)
-                        .font(.caption)
-                        .bold()
-                        .padding(.trailing,-6)
-                    Text("/hr")
-                        .foregroundColor(.gray)
-                        .font(.system(size: 11))
-                }
-                .padding(.top,-30)
-                
-                
-                HStack{
-                    Image("CarBlue")
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                    Text(slot + " Spots")
-                        .font(.footnote)
-                        .bold()
-                        .foregroundColor(.black)
-                }
- 
-                
-            }
-  
-        }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(radius: 5)
-   
-    }
+    var amount: String
 }
-
-
-
-
-
-
 
 #Preview {
     MyBooking()
+        .environmentObject(AuthViewModel())
 }
