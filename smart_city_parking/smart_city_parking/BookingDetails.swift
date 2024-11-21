@@ -91,8 +91,13 @@ struct BookingDetails: View {
                         .fontWeight(.bold)
                         .accentColor(Color.red)
                         .datePickerStyle(CompactDatePickerStyle())
-                    
-                    
+           
+                }
+                
+                .padding(.top, 25)
+                .padding(.horizontal, 30)
+                
+                VStack{
                     NavigationLink(destination: SelectVehicle()) {
                         Text("Continue")
                             .fontWeight(.bold)
@@ -103,11 +108,8 @@ struct BookingDetails: View {
                             .cornerRadius(10)
                     }
                     .padding(.horizontal)
-                    .padding(.bottom)
+                    .padding(.top,70)
                 }
-                
-                .padding(.top, 25)
-                .padding(.horizontal, 30)
                 
                 Spacer()
             }

@@ -132,7 +132,7 @@ struct SelectParkingSlot: View {
             }
             
             // Continue Button
-            NavigationLink(destination: VehicleDetailsView()) {
+            NavigationLink(destination: ReviewSummary()) {
                 Text("Continue")
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)

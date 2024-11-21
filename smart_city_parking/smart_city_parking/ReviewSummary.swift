@@ -8,6 +8,53 @@
 import SwiftUI
 
 struct ReviewSummary: View {
+    
+    @EnvironmentObject var vehicleModel: VehicleModel
+    @EnvironmentObject var parkname: ParkName
+    @EnvironmentObject var slotName: SlotName
+    @EnvironmentObject var bookingData: BookingData
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+    }
+    
+    var amPmTimeFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        return formatter
+    }
+    
+    // Helper function to calculate the difference in hours and minutes, and return total hours as well
+    func calculateTotalTime(arriveTime: Date, exitTime: Date) -> (String, Double) {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute], from: arriveTime, to: exitTime)
+        
+        let hours = components.hour ?? 0
+        let minutes = components.minute ?? 0
+        
+        // Calculate total time in hours (decimal format for multiplication)
+        let totalHours = Double(hours) + (Double(minutes) / 60.0)
+        
+        // Return the formatted time as "X hours Y minutes" and total hours in decimal
+        let formattedTime = "\(hours) hours \(minutes) minutes"
+        return (formattedTime, totalHours)
+    }
+    
+    var totalTime: String {
+        // Calculate the total time and formatted string
+        let (formattedTime, _) = calculateTotalTime(arriveTime: bookingData.selectedArriveTime, exitTime: bookingData.selectedExitTime)
+        return formattedTime
+    }
+    
+    var totalAmount: String {
+        // Calculate the total hours in decimal form and then multiply by 100 to get the amount
+        let (_, totalHours) = calculateTotalTime(arriveTime: bookingData.selectedArriveTime, exitTime: bookingData.selectedExitTime)
+        let amount = totalHours * 100
+        return "Rs. \(Int(amount))"
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             
@@ -18,31 +65,41 @@ struct ReviewSummary: View {
                 
                 Spacer()
             }
-            .padding(.horizontal,20)
-            
-            
-            
+            .padding(.horizontal, 20)
             
             VStack(spacing: 15) {
-                NavigationLink(destination: ParkingDetails()){
-                    ParkingInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: "ABCDEFG", price: "100", slot: "28"  )
+                NavigationLink(destination: ParkingDetails()) {
+                    ParkingInfoCard(imgName: "ParkingImg2", parkingCTGY: "Car Parking", rating: "4.8", parkingName: parkname.selectedPark, price: "100", slot: "28")
                 }
             }
-            .padding(.horizontal,20)
-            .padding([.top, .bottom],10)
-            
+            .padding(.horizontal, 20)
+            .padding([.top, .bottom], 10)
             
             VStack(alignment: .leading, spacing: 10) {
                 Text("Your Booking")
                     .font(.headline)
                     .padding(.top)
                 
-                BookingDetailRow(icon: "clock", label: "Arriving Time", value: "08.00 AM")
-                BookingDetailRow(icon: "clock", label: "Exit Time", value: "12.00 AM")
-                BookingDetailRow(icon: "car.fill", label: "Vehicle", value: "Toyota Vits (CAR)")
-                BookingDetailRow(icon: "ticket.fill", label: "Slot", value: "B2")
+                BookingDetailRow(icon: "clock", label: "Arriving Time", value: amPmTimeFormatter.string(from: bookingData.selectedArriveTime))
+                BookingDetailRow(icon: "clock", label: "Exit Time", value: amPmTimeFormatter.string(from: bookingData.selectedExitTime))
+               
+                BookingDetailRow(
+                    icon: "car.fill",
+                    label: "Vehicle",
+                    value: vehicleModel.selectedVehicle != nil
+                        ? "\(vehicleModel.selectedVehicle!.name) (\(vehicleModel.selectedVehicle!.number))"
+                        : "No vehicle selected"
+                )
+                
+                BookingDetailRow(
+                    icon: "car.fill",
+                    label: "Slot",
+                    value: slotName.selectedSlot != nil
+                        ? "\(slotName.selectedSlot!.name)"
+                        : "No slot selected"
+                )
             }
-            .padding(.horizontal,20)
+            .padding(.horizontal, 20)
             .padding(.bottom)
             
             Divider()
@@ -54,9 +111,11 @@ struct ReviewSummary: View {
                 Text("Price details")
                     .font(.headline)
                 
-                PriceDetailRow(label: "Amount", value: "Rs.400")
-                PriceDetailRow(label: "Total Hours", value: "02h")
-                PriceDetailRow(label: "Fees", value: "Rs.150")
+                // Display the formatted total time (hours and minutes)
+                PriceDetailRow(label: "Total Time", value: totalTime)
+                
+                // Display the calculated amount
+                PriceDetailRow(label: "Amount", value: totalAmount)
             }
             .padding(.horizontal)
             .padding(.bottom)
@@ -65,18 +124,21 @@ struct ReviewSummary: View {
                 .padding(.horizontal)
                 .padding(.bottom)
             
-            // Total Price
-            HStack {
-                Text("Total Price")
-                    .font(.headline)
-                Spacer()
-                Text("Rs.550")
-                    .font(.headline)
-            }
-            .padding(.horizontal)
-            .padding(.top, 5)
+            
+            //Total Price
+           HStack {
+               Text("Total Price")
+                   .font(.headline)
+               Spacer()
+               Text(totalAmount)
+                   .font(.headline)
+           }
+           .padding(.horizontal)
+           .padding(.top, 20)
             
             Spacer()
+            
+           
             
             // Payment Button
             Button(action: {
@@ -92,14 +154,12 @@ struct ReviewSummary: View {
             }
             .padding(.horizontal)
             .padding(.bottom)
-            
-           
-            
         }
         .padding(.top)
-        
     }
 }
+
+
 
 // Booking Detail Row
 struct BookingDetailRow: View {
@@ -210,9 +270,10 @@ struct ParkingInfoCard: View {
 
 
 
-
-
-
 #Preview {
     ReviewSummary()
+        .environmentObject(VehicleModel())
+        .environmentObject(ParkName())
+        .environmentObject(SlotName())
+        .environmentObject(BookingData())
 }

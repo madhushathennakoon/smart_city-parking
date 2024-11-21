@@ -35,6 +35,12 @@ struct VehicleDetailsView: View {
                     .padding()
             }
             
+            Text(vehicleModel.selectedVehicle != nil ?
+                 "\(vehicleModel.selectedVehicle!.name) - \(vehicleModel.selectedVehicle!.number)" :
+                 "No vehicle selected.")
+            
+            
+            
             Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
             
             if let selectedSlot = slotName.selectedSlot {
@@ -67,7 +73,7 @@ struct VehicleDetailsView: View {
 struct VehicleDetailsView_Previews: PreviewProvider {
     static var previews: some View {
         VehicleDetailsView()
-            .environmentObject(VehicleModel()) // Inject the same EnvironmentObject here
+            .environmentObject(VehicleModel()) 
             .environmentObject(ParkName())
             .environmentObject(SlotName())
             .environmentObject(BookingData())
