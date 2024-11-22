@@ -96,6 +96,7 @@
 		AEBE6A222CF043E400C0501A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		AEBE6A332CF0614D00C0501A /* detailsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = detailsModel.xcdatamodel; sourceTree = "<group>"; };
 		AEBE6A352CF07C7200C0501A /* test03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test03.swift; sourceTree = "<group>"; };
+		AEBE6A372CF09F5A00C0501A /* smart_city_parking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = smart_city_parking.entitlements; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
 		AED853532CD2266000841149 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -160,6 +161,7 @@
 		AED853502CD2266000841149 /* smart_city_parking */ = {
 			isa = PBXGroup;
 			children = (
+				AEBE6A372CF09F5A00C0501A /* smart_city_parking.entitlements */,
 				AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */,
 				AED853512CD2266000841149 /* smart_city_parkingApp.swift */,
 				AED853532CD2266000841149 /* SplashScreenView.swift */,
@@ -552,6 +554,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = smart_city_parking/smart_city_parking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";
@@ -581,6 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = smart_city_parking/smart_city_parking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";

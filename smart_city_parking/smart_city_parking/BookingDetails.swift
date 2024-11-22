@@ -115,7 +115,7 @@ struct BookingDetails: View {
             }
         }
         .onAppear {
-            // Sync local state with global BookingData
+            
             bookingData.selectedDate = selectDate
             bookingData.selectedArriveTime = selectArriveTime
             bookingData.selectedExitTime = selectExitTime

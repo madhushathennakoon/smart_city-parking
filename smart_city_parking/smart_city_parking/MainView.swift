@@ -16,7 +16,7 @@ struct MainView: View {
                     Image(systemName: "house.fill")
                     Text("Home")
                 }
-            Home()
+            Explore()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Explore")

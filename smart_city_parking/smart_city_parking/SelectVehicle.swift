@@ -65,7 +65,7 @@ struct SelectVehicle: View {
                 }
                 .padding(.top,-10)
                 
-                // Spacer
+                
                 Spacer()
                 
 //                // Show selected vehicle information
@@ -105,7 +105,7 @@ struct VehicleRow: View {
     
     var body: some View {
         HStack {
-            Image("CarBlue1") // Placeholder image, replace with your actual image
+            Image("CarBlue1")
                 .resizable()
                 .frame(width: 50, height: 50)
                 .padding(.trailing, 10)
@@ -130,9 +130,9 @@ struct VehicleRow: View {
     }
 }
 
-// Vehicle struct to represent a vehicle
+
 struct Vehicle: Identifiable, Hashable {
-    var id: String { number } // Make vehicle unique using the vehicle number
+    var id: String { number } 
     var name: String
     var number: String
 }

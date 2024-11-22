@@ -218,13 +218,13 @@ struct SignIn: View {
 
 struct BiometricAuthenticator {
 
-    // Function to authenticate using Face ID (or Touch ID)
+    //authenticate using Face ID
     func authenticate(completion: @escaping (Result<Void, Error>) -> Void) {
         let context = LAContext()
         var error: NSError?
 
         if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            // Check if Face ID or Touch ID is available
+            
             context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "Log in with Face ID") { success, authenticationError in
                 DispatchQueue.main.async {
                     if success {
@@ -240,20 +240,20 @@ struct BiometricAuthenticator {
     }
 }
 
-// Schedule a simple local notification
+// local notification
 func loginNotification() {
     let content = UNMutableNotificationContent()
     content.title = "Login Successful!"
     content.body = "You have successfully logged in to the Parkspot app."
     content.sound = .default
 
-    // Trigger notification after 5 seconds
+    
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
     
-    // Create a notification request with a unique identifier
+   
     let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
     
-    // Add the notification request to the notification center
+   
     UNUserNotificationCenter.current().add(request) { error in
         if let error = error {
             print("Error scheduling notification: \(error.localizedDescription)")

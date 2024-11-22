@@ -123,20 +123,20 @@ struct PaymentMethod: View {
     }
 }
 
-// Schedule a simple local notification
+//  local notification
 func bookingNotification() {
     let content = UNMutableNotificationContent()
     content.title = "Booking Successful!"
     content.body = "You have successfully Booked in your Slot"
     content.sound = .default
 
-    // Trigger notification after 5 seconds
+    
     let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
     
-    // Create a notification request with a unique identifier
+    
     let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
     
-    // Add the notification request to the notification center
+  
     UNUserNotificationCenter.current().add(request) { error in
         if let error = error {
             print("Error scheduling notification: \(error.localizedDescription)")

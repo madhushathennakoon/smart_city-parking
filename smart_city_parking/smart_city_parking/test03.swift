@@ -1,56 +1,67 @@
 import SwiftUI
-import UserNotifications
+import MapKit
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Text("Local Notification Example")
-                .font(.largeTitle)
-                .padding()
-            
-            Button("Send Notification") {
-                scheduleNotification()
-            }
-            .padding()
-        }
+
+extension MKPointAnnotation: Identifiable {
+    public var id: UUID {
+        return UUID()
+    }
+}
+
+struct Explore: View {
+    
+    
+    let colombo = MKPointAnnotation()
+    let kandy = MKPointAnnotation()
+    
+    
+    let lotusTower = MKPointAnnotation()
+    let galleFace = MKPointAnnotation()
+    let independenceSquare = MKPointAnnotation()
+    let colomboFort = MKPointAnnotation()
+
+   
+    @State private var region = MKCoordinateRegion(
+        center: CLLocationCoordinate2D(latitude: 6.9271, longitude: 79.8612),
+        span: MKCoordinateSpan(latitudeDelta: 0.03, longitudeDelta: 0.03)
+    )
+    
+    init() {
+        
+        colombo.title = "Colombo"
+        colombo.coordinate = CLLocationCoordinate2D(latitude: 6.906288910788824, longitude: 79.87086619716021)
+        
+        kandy.title = "Kandy"
+        kandy.coordinate = CLLocationCoordinate2D(latitude: 6.906061306524888, longitude: 79.86933551883689)
+        
+        
+        lotusTower.title = "Lotus Tower"
+        lotusTower.coordinate = CLLocationCoordinate2D(latitude: 6.9270, longitude: 79.9772)
+        
+        galleFace.title = "Galle Face"
+        galleFace.coordinate = CLLocationCoordinate2D(latitude: 6.9276, longitude: 79.8560)
+        
+        independenceSquare.title = "Independence Square"
+        independenceSquare.coordinate = CLLocationCoordinate2D(latitude: 6.9272, longitude: 79.9748)
+        
+        colomboFort.title = "Colombo Fort"
+        colomboFort.coordinate = CLLocationCoordinate2D(latitude: 6.9366, longitude: 79.8487)
     }
     
-//    // Request permission for sending notifications
-//    func requestNotificationPermission() {
-//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
-//            if granted {
-//                print("Notification permission granted.")
-//            } else {
-//                print("Notification permission denied.")
-//            }
-//        }
-//    }
-    
-    // Schedule a simple local notification
-    func scheduleNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "Hello!"
-        content.body = "This is a test notification."
-        content.sound = .default
-
-        // Trigger notification after 5 seconds
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        
-        // Create a notification request with a unique identifier
-        let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
-        
-        // Add the notification request to the notification center
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print("Error scheduling notification: \(error.localizedDescription)")
-            } else {
-                print("Notification scheduled.")
+    var body: some View {
+        NavigationView {
+            VStack {
+                
+                Map(coordinateRegion: $region, showsUserLocation: true, annotationItems: [colombo, kandy, lotusTower, galleFace, independenceSquare, colomboFort]) { location in
+                    MapPin(coordinate: location.coordinate, tint: .red)
+                }
+                .edgesIgnoringSafeArea(.all)
+                
             }
         }
     }
 }
 
-
 #Preview {
-    ContentView()
+    Explore()
 }

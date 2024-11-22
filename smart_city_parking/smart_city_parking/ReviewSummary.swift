@@ -122,7 +122,7 @@ struct ReviewSummary: View {
             "slot": slotName.selectedSlot?.name ?? "No slot selected",
             "totalTime": totalTime,
             "amount": totalAmount,
-            "timestamp": Timestamp() // For ordering bookings by date
+            "timestamp": Timestamp()
         ]
         
         userBookingsRef.addDocument(data: bookingData) { error in
@@ -130,7 +130,7 @@ struct ReviewSummary: View {
                 print("Error saving booking data: \(error.localizedDescription)")
             } else {
                 print("Booking data successfully saved!")
-                navigateToConfirmation = true // Trigger navigation
+                navigateToConfirmation = true 
             }
         }
     }

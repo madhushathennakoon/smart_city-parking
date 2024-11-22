@@ -93,7 +93,7 @@ struct SelectParkingSlot: View {
                 HStack {
                     VStack {
                         ScrollView {
-                            VStack(spacing: 10) { // Reduced vertical spacing between rows
+                            VStack(spacing: 10) {
                                 ForEach(spots1, id: \.self) { slot in
                                     Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
                                         .onTapGesture {
@@ -101,13 +101,13 @@ struct SelectParkingSlot: View {
                                         }
                                 }
                             }
-                            .padding(.horizontal, 25) // Reduced horizontal padding
+                            .padding(.horizontal, 25)
                         }
                     }
                     
                     VStack {
                         ScrollView {
-                            VStack(spacing: 10) { // Reduced vertical spacing between rows
+                            VStack(spacing: 10) {
                                 ForEach(spots2, id: \.self) { slot in
                                     Row(Spot: slot, isSelected: slotName.selectedSlot == slot)
                                         .onTapGesture {
@@ -115,11 +115,11 @@ struct SelectParkingSlot: View {
                                         }
                                 }
                             }
-                            .padding(.horizontal, 25) // Reduced horizontal padding
+                            .padding(.horizontal, 25)
                         }
                     }
                 }
-                .padding(.horizontal, 0) // Reduced horizontal padding
+                .padding(.horizontal, 0)
                 
                 
 //                if let selectedVehicle = slotName.selectedSlot {
@@ -164,7 +164,7 @@ struct Row: View {
     
     var body: some View {
         HStack {
-            Image("CarLightBlue") // Placeholder image
+            Image("CarLightBlue")
                 .resizable()
                 .frame(width: 40, height: 40)
                 .foregroundColor(.blue)
@@ -185,7 +185,7 @@ struct Row: View {
     }
 }
 
-// Vehicle struct to represent a vehicle
+
 struct spot: Identifiable, Hashable {
     var id: String { name }
     var name: String
