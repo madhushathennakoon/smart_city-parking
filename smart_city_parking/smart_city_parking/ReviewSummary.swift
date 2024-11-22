@@ -150,6 +150,7 @@ struct ReviewSummary: View {
                     Spacer()
                 }
                 .padding(.horizontal, 20)
+                .padding(.top,-70)
                 
                 VStack(spacing: 15) {
                     NavigationLink(destination: ParkingDetails()) {
@@ -157,7 +158,8 @@ struct ReviewSummary: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                .padding([.top, .bottom], 10)
+                .padding(.top,-30)
+                
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Your Booking")
@@ -213,7 +215,7 @@ struct ReviewSummary: View {
                         .font(.headline)
                 }
                 .padding(.horizontal)
-                .padding(.top, 20)
+                .padding(.top, 10)
                 
                 Spacer()
                 

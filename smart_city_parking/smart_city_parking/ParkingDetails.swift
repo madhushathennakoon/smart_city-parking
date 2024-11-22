@@ -33,8 +33,7 @@ struct ParkingDetails: View {
                     .cornerRadius(10)
                 
                     .padding(.horizontal,20)
-                
-                
+                    .padding(.top,-60)
                 
                 VStack(alignment: .leading, spacing: 8) {
                     HStack {
@@ -43,7 +42,7 @@ struct ParkingDetails: View {
                             .padding(5)
                             .background(Color.blue.opacity(0.2))
                             .cornerRadius(5)
-                            .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(.blue)
                         Spacer()
                         HStack(spacing: 4) {
                             Image("Star")
@@ -59,9 +58,6 @@ struct ParkingDetails: View {
                         
                     }
                     .padding(.top,15)
-                    
-                    
-                    
                     
                     HStack{
                         VStack(alignment: .leading){
@@ -84,10 +80,10 @@ struct ParkingDetails: View {
                     }
                     .padding(.top,10)
                     
+                    
+                    
                 }
                 .padding(.horizontal,20)
-                
-                
                 
                 VStack {
                     
@@ -118,6 +114,7 @@ struct ParkingDetails: View {
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 30)
+                    
                     
                     Divider()
                         .padding(.horizontal)
@@ -164,6 +161,7 @@ struct ParkingDetails: View {
                                 .padding(.top, 5)
                         }
                         .padding(.horizontal, -175)
+                        
                     }
                     
                     
@@ -174,7 +172,7 @@ struct ParkingDetails: View {
                 Button(action: {
                     parkname.selectedPark = parkingName
                     navigateToDetail.toggle()
-           
+                    
                 }) {
                     Text("Book Slot")
                         .fontWeight(.bold)
@@ -190,16 +188,18 @@ struct ParkingDetails: View {
                 
                 .navigationDestination(isPresented: $navigateToDetail) {
                     BookingDetails()
-//                        .environmentObject(ParkName())
-//                        .environmentObject(VehicleModel())
-                        
-                        
+                    //                        .environmentObject(ParkName())
+                    //                        .environmentObject(VehicleModel())
+                    
+                    
                 }
                 
             }
             .padding(.top)
+            .padding(.bottom,30)
             
         }
+        
     }
 }
 

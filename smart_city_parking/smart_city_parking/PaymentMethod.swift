@@ -81,6 +81,7 @@ struct PaymentMethod: View {
                 Button(action: {
                     
                     navigateToConfirmation = true
+                    bookingNotification()
                 }) {
                     Text("Pay Now")
                         .fontWeight(.bold)
@@ -118,6 +119,29 @@ struct PaymentMethod: View {
             .padding()
             .background(Color.gray.opacity(0.1))
             .cornerRadius(10)
+        }
+    }
+}
+
+// Schedule a simple local notification
+func bookingNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Booking Successful!"
+    content.body = "You have successfully Booked in your Slot"
+    content.sound = .default
+
+    // Trigger notification after 5 seconds
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    
+    // Create a notification request with a unique identifier
+    let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
+    
+    // Add the notification request to the notification center
+    UNUserNotificationCenter.current().add(request) { error in
+        if let error = error {
+            print("Error scheduling notification: \(error.localizedDescription)")
+        } else {
+            print("Notification scheduled.")
         }
     }
 }

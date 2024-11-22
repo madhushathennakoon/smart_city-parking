@@ -1,3 +1,4 @@
+
 //
 //  SignIn.swift
 //  smart_city_parking
@@ -8,6 +9,7 @@
 import SwiftUI
 import FirebaseAuth
 import LocalAuthentication
+import UserNotifications
 
 struct SignIn: View {
     @State private var email: String = ""
@@ -97,6 +99,7 @@ struct SignIn: View {
                         if authResult != nil {
                             navigateToLocation = true
                             authViewModel.userID = authResult?.user.uid
+                            loginNotification()
                         }
                     }
                 }) {
@@ -119,6 +122,7 @@ struct SignIn: View {
                         case .success:
                             isAuthenticated = true
                             navigateToLocation = true
+                            loginNotification()
                         case .failure(let error):
                             alertMessage = error.localizedDescription
                             showAlert = true
@@ -232,6 +236,29 @@ struct BiometricAuthenticator {
             }
         } else {
             completion(.failure(error ?? NSError(domain: "", code: -1, userInfo: nil)))
+        }
+    }
+}
+
+// Schedule a simple local notification
+func loginNotification() {
+    let content = UNMutableNotificationContent()
+    content.title = "Login Successful!"
+    content.body = "You have successfully logged in to the Parkspot app."
+    content.sound = .default
+
+    // Trigger notification after 5 seconds
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+    
+    // Create a notification request with a unique identifier
+    let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
+    
+    // Add the notification request to the notification center
+    UNUserNotificationCenter.current().add(request) { error in
+        if let error = error {
+            print("Error scheduling notification: \(error.localizedDescription)")
+        } else {
+            print("Notification scheduled.")
         }
     }
 }

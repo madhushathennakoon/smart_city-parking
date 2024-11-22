@@ -56,6 +56,7 @@ struct SelectParkingSlot: View {
                     Spacer()
                 }
                 .padding(.horizontal,20)
+                .padding(.top,-70)
                 
                 
                 VStack {
@@ -85,7 +86,7 @@ struct SelectParkingSlot: View {
                     }
                 }
                 .padding(.horizontal,20)
-                .padding(.top,20)
+                .padding(.top,-30)
                 .padding(.bottom,20)
                 
                 
@@ -121,17 +122,17 @@ struct SelectParkingSlot: View {
                 .padding(.horizontal, 0) // Reduced horizontal padding
                 
                 
-                if let selectedVehicle = slotName.selectedSlot {
-                    Text("Selected Vehicle:")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding(.horizontal)
-                    
-                    Text("\(selectedVehicle.name)")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                        .padding(.horizontal)
-                }
+//                if let selectedVehicle = slotName.selectedSlot {
+//                    Text("Selected Vehicle:")
+//                        .font(.title3)
+//                        .fontWeight(.bold)
+//                        .padding(.horizontal)
+//                    
+//                    Text("\(selectedVehicle.name)")
+//                        .font(.subheadline)
+//                        .foregroundColor(.gray)
+//                        .padding(.horizontal)
+//                }
                 
                 // Continue Button
                 NavigationLink(destination: ReviewSummary()) {

@@ -52,7 +52,7 @@ struct BookingDetails: View {
                             .padding(.bottom, 5)
                     }
                 }
-                .padding(.top, 10)
+                .padding(.top, -50)
                 .padding(.horizontal, 20)
                 
                 Spacer().frame(height: 30) // Spacing
@@ -108,7 +108,7 @@ struct BookingDetails: View {
                             .cornerRadius(10)
                     }
                     .padding(.horizontal)
-                    .padding(.top,70)
+                    .padding(.top,20)
                 }
                 
                 Spacer()

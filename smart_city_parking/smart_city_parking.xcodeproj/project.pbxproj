@@ -27,7 +27,6 @@
 		AE95C82C2CDB826900E039C5 /* Verification 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82B2CDB826900E039C5 /* Verification 2.swift */; };
 		AE95C82E2CDB85BF00E039C5 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82D2CDB85BF00E039C5 /* SignIn.swift */; };
 		AE95C8302CDB8CDA00E039C5 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE95C82F2CDB8CDA00E039C5 /* Location.swift */; };
-		AEA98E102CEB5A750094A685 /* test01.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA98E0F2CEB5A750094A685 /* test01.swift */; };
 		AEAF6EF32CEC8A64009CEABD /* test02.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF6EF22CEC8A64009CEABD /* test02.swift */; };
 		AEB216D22CDC89EE0016C3F3 /* ManualLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */; };
 		AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB216D32CDC926A0016C3F3 /* Home.swift */; };
@@ -88,7 +87,6 @@
 		AE95C82B2CDB826900E039C5 /* Verification 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Verification 2.swift"; sourceTree = "<group>"; };
 		AE95C82D2CDB85BF00E039C5 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		AE95C82F2CDB8CDA00E039C5 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		AEA98E0F2CEB5A750094A685 /* test01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test01.swift; sourceTree = "<group>"; };
 		AEAF6EF22CEC8A64009CEABD /* test02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test02.swift; sourceTree = "<group>"; };
 		AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualLocation.swift; sourceTree = "<group>"; };
 		AEB216D32CDC926A0016C3F3 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -177,21 +175,20 @@
 				AE95C82F2CDB8CDA00E039C5 /* Location.swift */,
 				AEB216D12CDC89EE0016C3F3 /* ManualLocation.swift */,
 				AE61C1112CDDE47F00C59148 /* MainView.swift */,
+				AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */,
 				272E504A2CDEEAB1001E01F2 /* BookingDetails.swift */,
 				AE81E8222CDF2B8C0070A4A1 /* SelectVehicle.swift */,
-				AEA98E0F2CEB5A750094A685 /* test01.swift */,
 				AE81E8242CDF2F470070A4A1 /* SelectParkingSlot.swift */,
 				AE81E8262CDF486B0070A4A1 /* ReviewSummary.swift */,
-				AEBE6A222CF043E400C0501A /* DataController.swift */,
-				AEBE6A322CF0614D00C0501A /* detailsModel.xcdatamodeld */,
 				AE81E8282CDF698C0070A4A1 /* PaymentMethod.swift */,
 				AE81E82A2CDF76570070A4A1 /* SuccessView.swift */,
 				AE81E82C2CDF81270070A4A1 /* MyBooking.swift */,
 				AE81E82E2CDF92AB0070A4A1 /* Favourite.swift */,
 				AE81E8302CDF9E650070A4A1 /* Profile.swift */,
 				AE81E8322CDFA69D0070A4A1 /* Notifications.swift */,
+				AEBE6A222CF043E400C0501A /* DataController.swift */,
+				AEBE6A322CF0614D00C0501A /* detailsModel.xcdatamodeld */,
 				AEB216D32CDC926A0016C3F3 /* Home.swift */,
-				AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */,
 				AEAF6EF22CEC8A64009CEABD /* test02.swift */,
 				AEBE6A352CF07C7200C0501A /* test03.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
@@ -365,7 +362,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA98E102CEB5A750094A685 /* test01.swift in Sources */,
 				AE81E8332CDFA69D0070A4A1 /* Notifications.swift in Sources */,
 				AE81E8272CDF486B0070A4A1 /* ReviewSummary.swift in Sources */,
 				AE81E82D2CDF81270070A4A1 /* MyBooking.swift in Sources */,

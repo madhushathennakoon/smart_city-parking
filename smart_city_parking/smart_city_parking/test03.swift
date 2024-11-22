@@ -1,48 +1,56 @@
 import SwiftUI
+import UserNotifications
 
-struct FaceIDView: View {
-    
-    @StateObject private var authManager = AuthenticationManager()
-    
+struct ContentView: View {
     var body: some View {
         VStack {
-            if authManager.isAuthenticated {
-                // If the user is authenticated, show a welcome message
-                Text("Welcome! You are authenticated.")
-                    .font(.largeTitle)
-                    .foregroundColor(.green)
+            Text("Local Notification Example")
+                .font(.largeTitle)
+                .padding()
+            
+            Button("Send Notification") {
+                scheduleNotification()
+            }
+            .padding()
+        }
+    }
+    
+//    // Request permission for sending notifications
+//    func requestNotificationPermission() {
+//        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
+//            if granted {
+//                print("Notification permission granted.")
+//            } else {
+//                print("Notification permission denied.")
+//            }
+//        }
+//    }
+    
+    // Schedule a simple local notification
+    func scheduleNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "Hello!"
+        content.body = "This is a test notification."
+        content.sound = .default
+
+        // Trigger notification after 5 seconds
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // Create a notification request with a unique identifier
+        let request = UNNotificationRequest(identifier: "TestNotification", content: content, trigger: trigger)
+        
+        // Add the notification request to the notification center
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling notification: \(error.localizedDescription)")
             } else {
-                // If the user is not authenticated, show the Face ID prompt
-                VStack {
-                    Text("Please authenticate using Face ID")
-                        .font(.title)
-                        .padding()
-                    
-                    Button(action: {
-                        authManager.authenticateWithFaceID()
-                    }) {
-                        Text("Authenticate with Face ID")
-                            .font(.title2)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.blue)
-                            .cornerRadius(10)
-                    }
-                    
-                    // Display error message if authentication failed
-                    if let errorMessage = authManager.errorMessage {
-                        Text(errorMessage)
-                            .foregroundColor(.red)
-                            .padding()
-                    }
-                }
+                print("Notification scheduled.")
             }
         }
-        .padding()
     }
 }
 
 
 #Preview {
-    FaceIDView()
+    ContentView()
 }

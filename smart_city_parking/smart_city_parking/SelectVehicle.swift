@@ -48,12 +48,9 @@ struct SelectVehicle: View {
                     }
                 }
                 .padding(.horizontal, 20)
+                .padding(.top,-50)
                 
-                
-//                Text("hello")
-//                Text("Selected Park: \(parkname.selectedPark.isEmpty ? "No Park Selected" : parkname.selectedPark)")
-                
-                
+ 
                 // Vehicle List
                 ScrollView {
                     VStack(spacing: 15) {
@@ -66,23 +63,23 @@ struct SelectVehicle: View {
                     }
                     .padding(.horizontal)
                 }
-                .padding(.top)
+                .padding(.top,-10)
                 
                 // Spacer
                 Spacer()
                 
-                // Show selected vehicle information
-                if let selectedVehicle = vehicleModel.selectedVehicle {
-                    Text("Selected Vehicle:")
-                        .font(.title3)
-                        .fontWeight(.bold)
-                        .padding(.horizontal)
-                    Text("\(selectedVehicle.name) - \(selectedVehicle.number)")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                        .padding(.horizontal)
-                    
-                }
+//                // Show selected vehicle information
+//                if let selectedVehicle = vehicleModel.selectedVehicle {
+//                    Text("Selected Vehicle:")
+//                        .font(.title3)
+//                        .fontWeight(.bold)
+//                        .padding(.horizontal)
+//                    Text("\(selectedVehicle.name) - \(selectedVehicle.number)")
+//                        .font(.subheadline)
+//                        .foregroundColor(.gray)
+//                        .padding(.horizontal)
+//                    
+//                }
                 
                 
                 NavigationLink(destination: SelectParkingSlot()){
@@ -97,7 +94,7 @@ struct SelectVehicle: View {
                 .padding(.horizontal)
                 .padding(.bottom)
             }
-            .padding(.top)
+            .padding(.bottom,30)
         }
     }
 }

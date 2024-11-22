@@ -33,7 +33,9 @@ struct smart_city_parkingApp: App {
                 .environmentObject(bookingData)
                 .environmentObject(authViewModel)
                 .environment(\.managedObjectContext, dataController.container.viewContext )
-//            FaceIDView()
+          
+
+
                 
                 
  
