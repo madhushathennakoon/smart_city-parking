@@ -16,6 +16,7 @@ struct smart_city_parkingApp: App {
     @StateObject private var slotName = SlotName()
     @StateObject private var bookingData = BookingData()
     @StateObject private var authViewModel = AuthViewModel()
+    @StateObject private var dataController = DataController()
    
     
     init(){
@@ -31,6 +32,9 @@ struct smart_city_parkingApp: App {
                 .environmentObject(slotName)
                 .environmentObject(bookingData)
                 .environmentObject(authViewModel)
+                .environment(\.managedObjectContext, dataController.container.viewContext )
+//            FaceIDView()
+                
                 
  
         }

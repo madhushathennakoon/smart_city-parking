@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseFirestore
+import CoreData
 
 struct ReviewSummary: View {
     
@@ -16,7 +17,20 @@ struct ReviewSummary: View {
     @EnvironmentObject var bookingData: BookingData
     @EnvironmentObject var authViewModel: AuthViewModel
     
-    @State private var navigateToConfirmation = false // State to control navigation
+//    @Environment(\.managedObjectContext) var moc
+    
+    @State private var navigateToConfirmation = false
+    
+//    @State private var amount = ""
+//    @State private var arrivingTime = ""
+//    //    @State private var date = ""
+//    @State private var exitTime = ""
+//    @State private var parkingName = ""
+//    @State private var slot = ""
+//    @State private var totalHours = ""
+//    @State private var vehicle = ""
+//    @State private var userID = ""
+    
     
     var dateFormatter: DateFormatter {
         let formatter = DateFormatter()
@@ -51,6 +65,43 @@ struct ReviewSummary: View {
         return "Rs. \(Int(amount))"
     }
     
+    
+//    // Function to save booking to Core Data
+//    func saveBookingToCoreData() {
+//        guard let userID = authViewModel.userID else {
+//            print("User ID is nil. Cannot save data.")
+//            return
+//        }
+//        
+//        
+//        let newBooking = Details(context: moc)
+//        
+//        
+//        newBooking.vehicle = vehicleModel.selectedVehicle != nil
+//        ? "\(vehicleModel.selectedVehicle!.name) (\(vehicleModel.selectedVehicle!.number))"
+//        : "No vehicle selected"
+//        newBooking.parkingName = parkname.selectedPark
+//        newBooking.arrivingTime = amPmTimeFormatter.string(from: bookingData.selectedArriveTime)
+//        newBooking.exitTime = amPmTimeFormatter.string(from: bookingData.selectedExitTime)
+//        newBooking.slot = slotName.selectedSlot?.name ?? "No slot selected"
+//        newBooking.totalHours = totalTime
+//        newBooking.amount = totalAmount
+//        newBooking.userID = userID
+//        //            newBooking.date = bookingData.selectedDate
+//        
+//        do {
+//            try moc.save()
+//            print("Booking data saved locally!")
+//        } catch {
+//            print("Error saving booking data to Core Data: \(error.localizedDescription)")
+//        }
+//        
+//    }
+    
+    
+    
+    
+    // Function to save booking to firebase
     func saveBookingToFirestore() {
         guard let userID = authViewModel.userID else {
             print("User ID is nil. Cannot save data.")
@@ -62,6 +113,7 @@ struct ReviewSummary: View {
         
         let bookingData: [String: Any] = [
             "parkingName": parkname.selectedPark,
+            "date": dateFormatter.string(from: bookingData.selectedDate),
             "arrivingTime": amPmTimeFormatter.string(from: bookingData.selectedArriveTime),
             "exitTime": amPmTimeFormatter.string(from: bookingData.selectedExitTime),
             "vehicle": vehicleModel.selectedVehicle != nil
@@ -82,6 +134,9 @@ struct ReviewSummary: View {
             }
         }
     }
+    
+    
+    
     
     var body: some View {
         NavigationStack {
@@ -109,6 +164,7 @@ struct ReviewSummary: View {
                         .font(.headline)
                         .padding(.top)
                     
+                    BookingDetailRow(icon: "clock", label: "Date", value: dateFormatter.string(from: bookingData.selectedDate))
                     BookingDetailRow(icon: "clock", label: "Arriving Time", value: amPmTimeFormatter.string(from: bookingData.selectedArriveTime))
                     BookingDetailRow(icon: "clock", label: "Exit Time", value: amPmTimeFormatter.string(from: bookingData.selectedExitTime))
                     
@@ -161,13 +217,14 @@ struct ReviewSummary: View {
                 
                 Spacer()
                 
-               
+                
                 NavigationLink(destination: PaymentMethod(), isActive: $navigateToConfirmation) {
                     EmptyView()
                 }
                 
                 Button(action: {
                     saveBookingToFirestore()
+//                    saveBookingToCoreData()
                 }) {
                     Text("Payment")
                         .fontWeight(.bold)
@@ -303,4 +360,5 @@ struct ParkingInfoCard: View {
         .environmentObject(SlotName())
         .environmentObject(BookingData())
         .environmentObject(AuthViewModel())
+    
 }

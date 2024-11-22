@@ -38,6 +38,9 @@
 		AEBC7AD72CE1CDC200768CE3 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD62CE1CDC200768CE3 /* FirebaseCore */; };
 		AEBC7AD92CE1CDC200768CE3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7AD82CE1CDC200768CE3 /* FirebaseFirestore */; };
 		AEBC7ADB2CE1CDC200768CE3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AEBC7ADA2CE1CDC200768CE3 /* FirebaseStorage */; };
+		AEBE6A232CF043E400C0501A /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE6A222CF043E400C0501A /* DataController.swift */; };
+		AEBE6A342CF0614D00C0501A /* detailsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEBE6A322CF0614D00C0501A /* detailsModel.xcdatamodeld */; };
+		AEBE6A362CF07C7200C0501A /* test03.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEBE6A352CF07C7200C0501A /* test03.swift */; };
 		AED853522CD2266000841149 /* smart_city_parkingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853512CD2266000841149 /* smart_city_parkingApp.swift */; };
 		AED853542CD2266000841149 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED853532CD2266000841149 /* SplashScreenView.swift */; };
 		AED853562CD2266100841149 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AED853552CD2266100841149 /* Assets.xcassets */; };
@@ -92,6 +95,9 @@
 		AEBC407F2CE3726300488696 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
 		AEBC40812CE3736400488696 /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
 		AEBC7AD12CE1CBFB00768CE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AEBE6A222CF043E400C0501A /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		AEBE6A332CF0614D00C0501A /* detailsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = detailsModel.xcdatamodel; sourceTree = "<group>"; };
+		AEBE6A352CF07C7200C0501A /* test03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test03.swift; sourceTree = "<group>"; };
 		AED8534E2CD2266000841149 /* smart_city_parking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_city_parking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AED853512CD2266000841149 /* smart_city_parkingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_city_parkingApp.swift; sourceTree = "<group>"; };
 		AED853532CD2266000841149 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 				AEA98E0F2CEB5A750094A685 /* test01.swift */,
 				AE81E8242CDF2F470070A4A1 /* SelectParkingSlot.swift */,
 				AE81E8262CDF486B0070A4A1 /* ReviewSummary.swift */,
+				AEBE6A222CF043E400C0501A /* DataController.swift */,
+				AEBE6A322CF0614D00C0501A /* detailsModel.xcdatamodeld */,
 				AE81E8282CDF698C0070A4A1 /* PaymentMethod.swift */,
 				AE81E82A2CDF76570070A4A1 /* SuccessView.swift */,
 				AE81E82C2CDF81270070A4A1 /* MyBooking.swift */,
@@ -185,6 +193,7 @@
 				AEB216D32CDC926A0016C3F3 /* Home.swift */,
 				AE61C10F2CDDDAA200C59148 /* ParkingDetails.swift */,
 				AEAF6EF22CEC8A64009CEABD /* test02.swift */,
+				AEBE6A352CF07C7200C0501A /* test03.swift */,
 				AED853552CD2266100841149 /* Assets.xcassets */,
 				AED853572CD2266100841149 /* Preview Content */,
 			);
@@ -360,6 +369,7 @@
 				AE81E8332CDFA69D0070A4A1 /* Notifications.swift in Sources */,
 				AE81E8272CDF486B0070A4A1 /* ReviewSummary.swift in Sources */,
 				AE81E82D2CDF81270070A4A1 /* MyBooking.swift in Sources */,
+				AEBE6A362CF07C7200C0501A /* test03.swift in Sources */,
 				AE61C1102CDDDAA200C59148 /* ParkingDetails.swift in Sources */,
 				AEAF6EF32CEC8A64009CEABD /* test02.swift in Sources */,
 				AE81E8312CDF9E650070A4A1 /* Profile.swift in Sources */,
@@ -380,7 +390,9 @@
 				AEB216D42CDC926A0016C3F3 /* Home.swift in Sources */,
 				AE81E82F2CDF92AB0070A4A1 /* Favourite.swift in Sources */,
 				AE51E1E82CD9EACA00444207 /* Onboarding 1.swift in Sources */,
+				AEBE6A232CF043E400C0501A /* DataController.swift in Sources */,
 				AE81E8232CDF2B8C0070A4A1 /* SelectVehicle.swift in Sources */,
+				AEBE6A342CF0614D00C0501A /* detailsModel.xcdatamodeld in Sources */,
 				AEBC40802CE3726300488696 /* userModel.swift in Sources */,
 				AE81E8292CDF698C0070A4A1 /* PaymentMethod.swift in Sources */,
 				272E504B2CDEEAB1001E01F2 /* BookingDetails.swift in Sources */,
@@ -549,6 +561,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +590,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"smart_city_parking/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -741,6 +755,19 @@
 			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		AEBE6A322CF0614D00C0501A /* detailsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AEBE6A332CF0614D00C0501A /* detailsModel.xcdatamodel */,
+			);
+			currentVersion = AEBE6A332CF0614D00C0501A /* detailsModel.xcdatamodel */;
+			path = detailsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AED853462CD2266000841149 /* Project object */;
 }
